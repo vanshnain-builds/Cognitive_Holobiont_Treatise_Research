@@ -4,33 +4,41 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 02 — Claim → Equation → Evidence Audit**
+**Milestone 03 — Formal Audit of Chapters 8–10**
 
-The Treatise is being evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
+The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 02 findings
+### Milestone 03 findings
 
-- Sparse MoE strongly supports conditional expert computation, but does not establish autonomous “organ brains.”
-- Learned communication and multimodal alignment support learned interfaces, but not automatic universal semantic interoperability.
-- A Narrative Thread is a plausible recurrent/shared state; it is not by itself evidence of consciousness or identity.
-- Hypernetworks can generate target weights, but a small hypernetwork does not thereby guarantee arbitrary specialist regeneration.
-- The Treatise's direct use of KL divergence on generic hidden states is mathematically invalid unless those states are first mapped to probability distributions; representation-space alignment requires a common typed latent space.
-- Spectral-gap convergence bounds apply to specified consensus dynamics. They do not establish “spectral gap = speed of thought.”
-- The Lyapunov proof sketch is incomplete because the stated gradient-flow derivative requires assumptions not established by the actual hybrid/stochastic architecture; convergence is also not equivalent to Nash equilibrium.
-- Entropy is a useful health signal but is not sufficient by itself for corruption detection; calibration, OOD, disagreement, provenance and behavioral tests should be combined.
-- Gradient sharing is not inherently private. Secure aggregation and differential privacy must be analyzed under explicit threat models.
-- The 85% regeneration threshold, 80% LoRA recovery claim, 60–70% compute reduction, break-even estimates, and zero-downtime/immortality claims are hypotheses, not established results.
-- Anti-fragility requires measurable improvement after stress on held-out future tasks; recovery alone demonstrates robustness, not anti-fragility.
+- Representation consensus and probabilistic prediction consensus must be separated. KL divergence is valid only for probability distributions in a common simplex; generic hidden states require a common typed latent space and an appropriate metric.
+- Standard spectral-gap convergence results apply to specified consensus dynamics. For a connected undirected graph, `dot{x}=-Lx` yields exponential disagreement decay governed by `lambda_2(L)`, but this does not establish “spectral gap = speed of thought.”
+- Directed consensus requires different assumptions and cannot automatically inherit symmetric-Laplacian proofs.
+- Bridge temperature can be formalized as a positive softmax temperature, but the direction of temperature adaptation under uncertainty/stress is an empirical control problem, not a universal rule.
+- The Treatise's Lyapunov proof sketch is mathematically incomplete because the real architecture is nonlinear, stochastic, delayed and hybrid; a valid proof needs an explicit dynamical model and stability conditions.
+- Consensus optimization is not automatically a Nash equilibrium. Nash language requires explicit individual utilities and unilateral-deviation conditions.
+- HyperNetworks establish learned weight generation, not arbitrary faithful regeneration. Regeneration must be evaluated as behavioral/task fidelity under a defined distribution and error tolerance.
+- “85% regeneration” is undefined until the metric, evaluation distribution, baseline and confidence interval are specified.
+- Entropy is only one health signal. Calibration, OOD detection, disagreement, provenance, latency and behavioral tests should be combined into a fault-risk model.
+- Byzantine robustness is assumption-dependent; robust aggregation guarantees cannot be transferred directly to nonlinear model reconstruction.
+- Attack-memory can plausibly improve resilience, but anti-fragility requires statistically demonstrated improvement on held-out future stressors, not merely recovery after an attack.
+- Dynamic sleeping/hibernation may reduce average compute, but the Treatise's 60–70% figure requires workload and hardware measurements.
+- The proposed 3–5 consensus rounds and 2–3x latency are empirical hypotheses, not theoretical consequences.
+- Zero downtime and “immortality” remain speculative system-level claims.
 
 ## Research dossier
 
 - `research/00_milestone_01_literature_and_math_audit.md` — initial literature and mathematical audit.
-- `research/01_milestone_02_claim_equation_evidence_audit.md` — current chapter/claim/equation audit, corrected formulations, evidence gaps, experiment matrix, and source ledger.
+- `research/01_milestone_02_claim_equation_evidence_audit.md` — chapter/claim/equation audit and evidence matrix.
+- `research/02_milestone_03_formal_audit_chapters_8_10.md` — formal consensus, stability, regeneration and self-modification audit.
 
 ## Methodology
 
 For each claim: define the proposition → type every mathematical object → identify primary evidence → compare conflicting findings → state assumptions → derive or correct equations → define a falsification experiment → specify statistical evaluation. Surveys are used for discovery; primary papers are preferred for decisive claims.
 
+## Evidence principles
+
+The project does not treat biological analogy as proof. Reliability, regeneration, anti-fragility, consciousness, autonomy and AGI-level claims require explicit operational definitions and measurable tests. A successful component experiment does not validate the whole Holobiont.
+
 ## Next milestone
 
-**Milestone 03:** formal audit of Chapters 8–10, including directed consensus, bridge-temperature dynamics, Lyapunov/stability conditions, game-theoretic/Nash language, regeneration objectives, shadow-copy equations, cognitive mitosis, and evolutionary/self-modification. Implementation remains downstream of this formalization.
+**Milestone 04:** formalize Chapter 13 as a preregistered benchmark specification: datasets, specialist models, bridge architecture, objective functions, routing, fault injection, recovery protocol, baselines, statistical replication, and acceptance/falsification criteria. Implementation remains downstream of this specification.
