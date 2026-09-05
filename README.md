@@ -4,32 +4,29 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 03 — Formal Audit of Chapters 8–10**
+**Milestone 04 — Chapter 13 Benchmark and Falsification Specification**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 03 findings
+### Milestone 04 findings
 
-- Representation consensus and probabilistic prediction consensus must be separated. KL divergence is valid only for probability distributions in a common simplex; generic hidden states require a common typed latent space and an appropriate metric.
-- Standard spectral-gap convergence results apply to specified consensus dynamics. For a connected undirected graph, `dot{x}=-Lx` yields exponential disagreement decay governed by `lambda_2(L)`, but this does not establish “spectral gap = speed of thought.”
-- Directed consensus requires different assumptions and cannot automatically inherit symmetric-Laplacian proofs.
-- Bridge temperature can be formalized as a positive softmax temperature, but the direction of temperature adaptation under uncertainty/stress is an empirical control problem, not a universal rule.
-- The Treatise's Lyapunov proof sketch is mathematically incomplete because the real architecture is nonlinear, stochastic, delayed and hybrid; a valid proof needs an explicit dynamical model and stability conditions.
-- Consensus optimization is not automatically a Nash equilibrium. Nash language requires explicit individual utilities and unilateral-deviation conditions.
-- HyperNetworks establish learned weight generation, not arbitrary faithful regeneration. Regeneration must be evaluated as behavioral/task fidelity under a defined distribution and error tolerance.
-- “85% regeneration” is undefined until the metric, evaluation distribution, baseline and confidence interval are specified.
-- Entropy is only one health signal. Calibration, OOD detection, disagreement, provenance, latency and behavioral tests should be combined into a fault-risk model.
-- Byzantine robustness is assumption-dependent; robust aggregation guarantees cannot be transferred directly to nonlinear model reconstruction.
-- Attack-memory can plausibly improve resilience, but anti-fragility requires statistically demonstrated improvement on held-out future stressors, not merely recovery after an attack.
-- Dynamic sleeping/hibernation may reduce average compute, but the Treatise's 60–70% figure requires workload and hardware measurements.
-- The proposed 3–5 consensus rounds and 2–3x latency are empirical hypotheses, not theoretical consequences.
-- Zero downtime and “immortality” remain speculative system-level claims.
+- The first experiment is now specified as a staged B0–B6 benchmark rather than a single end-to-end comparison.
+- The benchmark separates monolithic, independent-specialist, latent-bridge, adaptive-routing, health-aware, regeneration, and stress-adaptation contributions.
+- Latent consensus is formally separated from predictive-distribution consensus. KL divergence is restricted to probability distributions in a common simplex.
+- Consensus convergence is tied to explicit graph dynamics. For connected undirected linear consensus, `dot{x}=-Lx` gives exponential disagreement decay governed by `lambda_2(L)`; this is not a theorem about cognitive speed.
+- Regeneration is defined behaviorally through evaluation loss/performance tolerance rather than an undefined percentage such as “85% regenerated.”
+- Byzantine robustness is evaluated under explicit attack and non-IID conditions; optimization guarantees are not transferred automatically to model reconstruction.
+- Health detection combines calibration, OOD, disagreement, latency, integrity, and task-error signals rather than entropy alone.
+- Anti-fragility is defined more strongly than recovery: improvement must occur on held-out related stress after adaptation, with no unacceptable clean-task regression.
+- Self-modification is constrained to a validation-gated architecture-search process.
+- Fixed claims such as 60–70% compute reduction, 3–5 consensus rounds, 2–3x latency, 85% regeneration, zero downtime, immortality, and AGI emergence remain hypotheses/speculation rather than established results.
 
 ## Research dossier
 
 - `research/00_milestone_01_literature_and_math_audit.md` — initial literature and mathematical audit.
 - `research/01_milestone_02_claim_equation_evidence_audit.md` — chapter/claim/equation audit and evidence matrix.
 - `research/02_milestone_03_formal_audit_chapters_8_10.md` — formal consensus, stability, regeneration and self-modification audit.
+- `research/03_milestone_04_chapter_13_preregistered_benchmark.md` — pre-implementation benchmark, mathematical specification, hypotheses and falsification criteria.
 
 ## Methodology
 
@@ -39,6 +36,30 @@ For each claim: define the proposition → type every mathematical object → id
 
 The project does not treat biological analogy as proof. Reliability, regeneration, anti-fragility, consciousness, autonomy and AGI-level claims require explicit operational definitions and measurable tests. A successful component experiment does not validate the whole Holobiont.
 
+## Implementation gate
+
+Implementation follows specification. Before the first serious prototype, the benchmark must fix the task/data split, specialist roles and model versions, bridge/routing definitions, objective functions, fault and Byzantine threat models, regeneration artifacts, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts.
+
+## Key literature anchors
+
+Sparse MoE: Shazeer et al. (2017); Switch Transformers (Fedus, Zoph & Shazeer).
+
+Hypernetworks: Ha, Dai & Le (2016).
+
+Learned communication: Foerster et al. (2016).
+
+Global latent workspace: VanRullen & Kanai (2021).
+
+Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Mallya & Lazebnik (2018).
+
+Byzantine-robust learning: Yin et al. (2018) and subsequent non-IID/attack evaluations.
+
+Consensus: Olfati-Saber, Fax & Murray (2007).
+
+Calibration/OOD: Guo et al. (2017); Lakshminarayanan et al. (2017); Lee et al. (2018).
+
+Federated learning/security: McMahan et al. (2017); Bonawitz et al. (2017).
+
 ## Next milestone
 
-**Milestone 04:** formalize Chapter 13 as a preregistered benchmark specification: datasets, specialist models, bridge architecture, objective functions, routing, fault injection, recovery protocol, baselines, statistical replication, and acceptance/falsification criteria. Implementation remains downstream of this specification.
+**Milestone 05:** adversarial/Byzantine threat-model and reliability analysis, including explicit fault taxonomy, attack surfaces, trust-update dynamics, recovery safety, and worst-case degradation bounds. Implementation remains downstream of this analysis.
