@@ -4,24 +4,22 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 05 — Byzantine, Adversarial, Reliability, and Recovery Audit**
+**Milestone 06 — Threat-to-Experiment Matrix and Regeneration Information-Budget Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 05 findings
+### Milestone 06 findings
 
-- Byzantine robustness of optimization is separated from Byzantine detection, attribution, inference integrity, and regeneration.
-- Honest non-IID specialization can naturally produce disagreement, so disagreement alone cannot be treated as proof of a malicious organ.
-- Adaptive, norm-matched, intermittent, and colluding attacks must be included; obvious outliers are insufficient.
-- Trust is formalized as a calibrated risk estimate over an observable history, with explicit quarantine/reintegration policy and hysteresis.
-- Recovery is treated as an untrusted computation until independently verified.
-- Checkpoint restoration, model reconstruction, and behavioral regeneration are distinct claims.
-- Hypernetwork regeneration is a plausible synthesis only for a restricted specialist family and sufficient surviving information; universal regeneration is unsupported.
-- Consensus safety/liveness and neural coordination are separated. Spectral-gap convergence bounds apply only to specified consensus dynamics and do not prove cognitive speed.
-- Self-healing is measured through availability, downtime, and recovery-time distributions rather than a zero-downtime assumption.
-- Adversarial input robustness is a separate axis from software/communication fault tolerance.
-- Calibration, OOD detection, and uncertainty are distinct properties and should not be collapsed into an unvalidated scalar trust score.
-- Anti-fragility requires improvement on held-out related stress after adaptation, not merely recovery or memorization of the training attack.
+- The central scientific question is now the relationship between surviving information, specialist reconstruction, and trustworthy fault detection.
+- Parameter similarity is not an adequate definition of regeneration; recovery is evaluated behaviorally on held-out data.
+- A regeneration information-budget experiment varies which artifacts survive: architecture, preprocessing, objective, examples/statistics, adapters, optimizer state, calibration state, routing state, checkpoints, and provenance.
+- Crash, omission, staleness, random corruption, Byzantine behavior, collusion, honest non-IID disagreement, adaptive attacks, input attacks, and detector compromise are separated threat classes.
+- Honest specialization can resemble malicious disagreement; detection must explicitly control false quarantine.
+- Consensus agreement is separated from correctness. Spectral-gap bounds apply to specified consensus dynamics only.
+- Secure aggregation is separated from differential privacy and from Byzantine robustness.
+- Calibration, OOD detection, and uncertainty remain distinct evaluation dimensions.
+- Regenerated specialists require structural, functional, behavioral, safety, calibration, and provenance gates.
+- Anti-fragility is defined as improvement on held-out related stress, not merely recovery from the observed failure.
 
 ## Research dossier
 
@@ -30,6 +28,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/02_milestone_03_formal_audit_chapters_8_10.md` — formal consensus, stability, regeneration and self-modification audit.
 - `research/03_milestone_04_chapter_13_preregistered_benchmark.md` — pre-implementation benchmark, mathematical specification, hypotheses and falsification criteria.
 - `research/04_milestone_05_byzantine_reliability_audit.md` — Byzantine threat model, reliability, recovery verification, adversarial robustness, and trust-dynamics audit.
+- `research/05_milestone_06_threat_experiment_information_budget.md` — threat-to-experiment matrix, regeneration information budget, recovery gates, and minimum evidence requirements.
 
 ## Methodology
 
@@ -45,9 +44,9 @@ Implementation follows specification. Before the first serious prototype, the be
 
 ## Key literature anchors
 
-Sparse MoE: Shazeer et al. (2017); Switch Transformers (Fedus, Zoph & Shazeer).
+Sparse MoE: Shazeer et al. (2017); Switch Transformers (Fedus, Zoph & Shazeer). https://www.jmlr.org/papers/v23/21-0998.html
 
-Hypernetworks: Ha, Dai & Le (2016); Chang, Flokas & Lipson (2023).
+Hypernetworks: Ha, Dai & Le (2016). https://arxiv.org/abs/1609.09106
 
 Learned communication: Foerster et al. (2016).
 
@@ -55,15 +54,15 @@ Global latent workspace: VanRullen & Kanai (2021).
 
 Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Mallya & Lazebnik (2018); recent continual-learning surveys.
 
-Byzantine-robust learning: Yin et al. (2018) and subsequent non-IID/adaptive-attack evaluations.
+Byzantine-robust learning: Yin et al. (2018); Xie et al. (2020); Bao et al. (2024); Allouah et al. (2023); Qian et al. (2024). https://proceedings.mlr.press/v80/yin18a.html https://proceedings.mlr.press/v115/xie20a.html https://proceedings.mlr.press/v238/bao24a.html https://proceedings.mlr.press/v206/allouah23a.html https://proceedings.mlr.press/v235/qian24b.html
 
 Consensus: Olfati-Saber, Fax & Murray (2007); switching-topology consensus literature.
 
-Calibration/OOD: Guo et al. (2017); Lakshminarayanan et al. (2017); Lee et al. (2018); recent uncertainty/OOD surveys.
+Calibration/OOD: Guo et al. (2017); Lakshminarayanan et al. (2017); Lee et al. (2018); Yang et al. (2021); Tu et al. (2024). https://arxiv.org/abs/2110.11334 https://proceedings.mlr.press/v235/tu24a.html
 
-Federated learning/security: McMahan et al. (2017); Bonawitz et al. (2017).
+Federated learning/security: McMahan et al. (2017); Bonawitz et al. (2017). https://research.google/pubs/practical-secure-aggregation-for-privacy-preserving-machine-learning/
 
-Fault tolerance/self-healing: recent systematic reviews of distributed/cloud fault tolerance and self-healing systems.
+Fault tolerance/self-healing: distributed-systems self-healing literature, including the fault-correction versus fault-tolerance tradeoff.
 
 ## Current evidence position
 
@@ -73,4 +72,4 @@ Claims of universal regeneration, literal immortality, zero downtime, consciousn
 
 ## Next milestone
 
-**Milestone 06:** turn the reliability findings into a complete threat-to-experiment matrix and information-budget analysis for regeneration, including formal attack surfaces, artifact sufficiency, recovery verification, worst-case degradation metrics, and the minimum evidence required before a prototype can be considered scientifically informative.
+**Milestone 07:** formalize the latent communication and modular representation layer, including interface identifiability, dimensionality, information bottlenecks, routing objectives, multimodal fusion, representation collapse/interference, and a preregistered bridge-comparison experiment.
