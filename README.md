@@ -4,22 +4,23 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 08 — Memory, Continual Learning, and Long-Term Knowledge Persistence Audit**
+**Milestone 09 — Multimodal Fusion, Global Workspace, Working Memory, and Cross-Organ Routing Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 08 findings
+### Milestone 09 findings
 
-- Catastrophic forgetting is established; no general method guarantees indefinite retention across arbitrary task sequences.
-- Replay, consolidation, gradient constraints, and context-dependent gating are complementary mechanisms with different assumptions and costs.
-- A finite external memory can preserve information outside model parameters, but retrieval is not equivalent to truth or internalized knowledge.
-- EWC-style penalties constrain parameter movement but require local smoothness/stationarity assumptions to support any loss-change bound; they do not prove indefinite functional preservation.
-- Episodic and semantic memory are useful conceptual distinctions, but their combination does not establish human-like continual learning.
-- Persistent memory must include provenance, versioning, temporal validity and rollback concepts if the system is expected to operate under stale, contradictory or poisoned writes.
-- Replication improves availability but does not by itself establish memory correctness or consistency under correlated corruption.
-- Modularity can remove direct parameter interference outside an active specialist set, but shared bridges, routing, memory and decision layers can still create indirect interference.
-- Memory compression and indefinite recall require explicit assumptions about the future task family and information sufficiency.
-- Retrieval recall, memory integrity, downstream task utility, calibration and freshness must be measured separately.
+- Specialized modality encoders, cross-attention, shared latent alignment in specific tasks, missing-modality evaluation, and dynamic gating are established engineering techniques.
+- A Global Workspace-inspired architecture has direct computational precedent: frozen modality-specific systems can encode/decode through a shared workspace and use cycle consistency for cross-modal alignment in limited-data settings.
+- A shared workspace is therefore a plausible engineering synthesis for selective inter-organ communication, but its necessity for general intelligence is not established.
+- Cross-attention is a strong baseline for the same communication problem; a separate workspace must beat it under matched parameter, compute and communication budgets.
+- A shared latent is not automatically a universal semantic language. Cycle-consistency or low latent distance alone does not prove semantic equivalence.
+- Shared/private latent representations should be compared with fully shared representations at equal capacity because modality-specific information can be discarded by forced sharing.
+- Attention weights are not sufficient causal attribution; routing importance requires interventions and randomized controls.
+- Missing-modality recovery is conditional. Performance must be measured for random, temporal, systematic, corrupted, contradictory and shifted missingness.
+- Spectral gap bounds convergence for specified consensus dynamics but is not a universal measure of cognitive speed.
+- Communication has a measurable information/latency budget. Payload, transport, synchronization and accelerator overhead must all be counted.
+- Claims of fixed compute/latency improvements require workload- and hardware-specific evidence.
 
 ## Research dossier
 
@@ -31,6 +32,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/05_milestone_06_threat_experiment_information_budget.md` — threat-to-experiment matrix, regeneration information budget, recovery gates, and minimum evidence requirements.
 - `research/06_milestone_07_latent_communication_modular_representation_audit.md` — latent interfaces, contrastive alignment, shared/private representations, routing, interference, and missing-modality experiments.
 - `research/07_milestone_08_memory_continual_learning_persistence_audit.md` — memory stores, continual learning, retrieval, consolidation, forgetting, provenance, stale/poisoned memory, rollback, information limits, and safe incremental updates.
+- `research/08_milestone_09_multimodal_global_workspace_routing_audit.md` — multimodal fusion, workspace formalization, broadcast/working-memory distinctions, missing modalities, reliability-aware routing, causal attribution, communication budgets, and controlled experiments.
 
 ## Methodology
 
@@ -42,7 +44,7 @@ The project does not treat biological analogy as proof. Reliability, regeneratio
 
 ## Implementation gate
 
-Implementation follows specification. Before the first serious prototype, the benchmark must fix the task/data split, specialist roles and model versions, bridge/routing definitions, objective functions, fault and Byzantine threat models, regeneration artifacts, memory semantics, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. For memory, do not implement a persistent store as if retrieval implies correctness; define provenance, freshness, validation and rollback first.
+Implementation follows specification. Before the first serious prototype, the benchmark must fix the task/data split, specialist roles and model versions, bridge/routing definitions, objective functions, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace size and token capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. For multimodal routing, causal intervention controls must be defined before interpreting attention or routing weights.
 
 ## Key literature anchors
 
@@ -52,15 +54,17 @@ Hypernetworks: Ha, Dai & Le (2016). https://arxiv.org/abs/1609.09106
 
 Learned communication: Foerster et al. (2016).
 
-Global workspace: VanRullen & Kanai and related Global Workspace literature; cognitive robotics review: https://link.springer.com/article/10.1007/s43154-021-00044-7
+Global workspace: Devillers, Maytie & VanRullen, https://arxiv.org/abs/2306.15711; Bao et al., https://arxiv.org/abs/2001.09485; cognitive workspace review literature.
 
 Contrastive representation learning: Chen et al. (2020) https://proceedings.mlr.press/v119/chen20j.html; Parulekar et al. (2023) https://proceedings.mlr.press/v195/parulekar23a.html; Zimmermann et al. (2021) https://proceedings.mlr.press/v139/zimmermann21a.html
 
-Cross-modal alignment: Radford et al. (2021), CLIP, https://arxiv.org/abs/2103.00020; Li & Tang (2025), https://arxiv.org/abs/2411.17040; Zhao et al. (2024), https://doi.org/10.1145/3649447
+Cross-modal alignment/fusion: Zhao, Zhang & Geng, Deep Multimodal Data Fusion (2024), https://doi.org/10.1145/3649447; Radford et al. (2021), CLIP, https://arxiv.org/abs/2103.00020
+
+Missing modalities: Wu et al. (2024), https://arxiv.org/abs/2409.07825; Lee et al., differentiable multimodal filters, https://arxiv.org/abs/2010.13021
 
 Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Mallya & Lazebnik (2018); Farajtabar et al. (2020); Knoblauch et al. (2020); recent continual-learning theory and surveys.
 
-Memory systems: Lewis et al. (2020) RAG; Packer et al. (2023) MemGPT; Park et al. (2023) Generative Agents; Wang et al. (2023) LongMem; recent 2026 surveys on agent memory and memory security.
+Memory systems: Lewis et al. (2020) RAG; Packer et al. (2023) MemGPT; Park et al. (2023) Generative Agents; Wang et al. (2023) LongMem; recent agent-memory and memory-security research.
 
 Byzantine-robust learning: Yin et al. (2018); Xie et al. (2020); Bao et al. (2024); Allouah et al. (2023); Qian et al. (2024).
 
@@ -72,10 +76,10 @@ Federated learning/security: McMahan et al. (2017); Bonawitz et al. (2017); priv
 
 ## Current evidence position
 
-The most defensible near-term interpretation is a **fault-aware modular inference system with explicit detection, isolation, recovery, verification, learned inter-organ communication loops, and stateful memory**. Its individual building blocks have substantial prior literature. The composition remains an empirical research question.
+The most defensible near-term interpretation is a **fault-aware modular inference system with explicit detection, isolation, recovery, verification, learned inter-organ communication loops, a bounded shared workspace, and stateful memory**. Its individual building blocks have substantial prior literature. The composition remains an empirical research question.
 
 Claims of universal regeneration, literal immortality, zero downtime, consciousness from global workspace, universal spectral-gap/cognition relationships, fixed compute/latency improvements, spontaneous AGI-level evolution, indefinite exact memory, and automatic correctness of retrieved memories remain unsupported hypotheses rather than established outcomes.
 
 ## Next milestone
 
-**Milestone 09:** formal audit of multimodal fusion, working-memory/global-workspace mechanisms, attention/broadcast dynamics, and cross-organ information routing, including causal attribution, bandwidth/latency tradeoffs, missing-modality behavior, and a controlled benchmark for whether a shared workspace adds value beyond ordinary fusion and routing.
+**Milestone 10:** formal audit of memory/workspace interaction, long-horizon state consistency, cross-organ learning dynamics, information persistence, and end-to-end reliability. The focus will be whether shared memory and workspace create measurable positive transfer without increasing interference, stale-state propagation, or failure correlation.
