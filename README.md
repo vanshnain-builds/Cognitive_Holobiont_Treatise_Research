@@ -4,23 +4,24 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 09 — Multimodal Fusion, Global Workspace, Working Memory, and Cross-Organ Routing Audit**
+**Milestone 10 — End-to-End Memory, Workspace, Continual-State, and Reliability Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 09 findings
+### Milestone 10 findings
 
-- Specialized modality encoders, cross-attention, shared latent alignment in specific tasks, missing-modality evaluation, and dynamic gating are established engineering techniques.
-- A Global Workspace-inspired architecture has direct computational precedent: frozen modality-specific systems can encode/decode through a shared workspace and use cycle consistency for cross-modal alignment in limited-data settings.
-- A shared workspace is therefore a plausible engineering synthesis for selective inter-organ communication, but its necessity for general intelligence is not established.
-- Cross-attention is a strong baseline for the same communication problem; a separate workspace must beat it under matched parameter, compute and communication budgets.
-- A shared latent is not automatically a universal semantic language. Cycle-consistency or low latent distance alone does not prove semantic equivalence.
-- Shared/private latent representations should be compared with fully shared representations at equal capacity because modality-specific information can be discarded by forced sharing.
-- Attention weights are not sufficient causal attribution; routing importance requires interventions and randomized controls.
-- Missing-modality recovery is conditional. Performance must be measured for random, temporal, systematic, corrupted, contradictory and shifted missingness.
-- Spectral gap bounds convergence for specified consensus dynamics but is not a universal measure of cognitive speed.
-- Communication has a measurable information/latency budget. Payload, transport, synchronization and accelerator overhead must all be counted.
-- Claims of fixed compute/latency improvements require workload- and hardware-specific evidence.
+- The architecture is best modeled as a stateful partially observable system connecting private specialists, typed latent bridges, bounded workspace, persistent memory, adaptive routing, verification, and recovery.
+- Workspace and persistent memory must remain distinct: workspace is bounded/transient coordination state, while memory is durable/versioned state with provenance and access policy.
+- Positive transfer and interference must be measured separately; adding organs is not expected to monotonically improve intelligence.
+- Persistent memory introduces a security boundary: recent work demonstrates memory poisoning can cause durable behavioral drift, so provenance and write validation are first-class design requirements.
+- Memory age is not a correctness certificate. Staleness must be evaluated against current task distributions.
+- The router is itself an adaptive state component; router drift can alter behavior even when specialist parameters remain fixed.
+- Specialist recovery must be distinguished into checkpoint restoration, replica restoration, teacher-guided reconstruction, hypernetwork reconstruction, and functional relearning.
+- Behavioral regeneration must be evaluated against a defined future task family and tolerance; parameter similarity is not equivalent to behavioral equivalence.
+- Common-mode failures can defeat nominal specialist redundancy when organs share routers, workspaces, memory infrastructure, embeddings, hypernetworks, data or hardware dependencies.
+- Reliability-aware routing can be posed as a constrained utility optimization, but risk estimates must themselves be calibrated and stress-tested.
+- Consensus is appropriate only for semantically shareable variables such as health metadata, protocol versions or checkpoint identifiers; forcing heterogeneous specialist representations to consensus can destroy specialization.
+- A small controlled prototype is now justified as a falsification instrument, but this does not validate the complete Cognitive Holobiont thesis.
 
 ## Research dossier
 
@@ -33,6 +34,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/06_milestone_07_latent_communication_modular_representation_audit.md` — latent interfaces, contrastive alignment, shared/private representations, routing, interference, and missing-modality experiments.
 - `research/07_milestone_08_memory_continual_learning_persistence_audit.md` — memory stores, continual learning, retrieval, consolidation, forgetting, provenance, stale/poisoned memory, rollback, information limits, and safe incremental updates.
 - `research/08_milestone_09_multimodal_global_workspace_routing_audit.md` — multimodal fusion, workspace formalization, broadcast/working-memory distinctions, missing modalities, reliability-aware routing, causal attribution, communication budgets, and controlled experiments.
+- `research/09_milestone_10_end_to_end_memory_workspace_reliability_audit.md` — end-to-end state model, memory/workspace separation, persistent-memory security, router stability, information limits, recovery hierarchy, correlated failures, reliability-aware routing, and hypotheses H22–H27.
 
 ## Methodology
 
@@ -82,4 +84,4 @@ Claims of universal regeneration, literal immortality, zero downtime, consciousn
 
 ## Next milestone
 
-**Milestone 10:** formal audit of memory/workspace interaction, long-horizon state consistency, cross-organ learning dynamics, information persistence, and end-to-end reliability. The focus will be whether shared memory and workspace create measurable positive transfer without increasing interference, stale-state propagation, or failure correlation.
+**Milestone 11:** build the formal end-to-end prototype specification from the now-separated state components, with exact specialist tasks, bridge interfaces, workspace protocol, memory schema, routing objective, failure injection, recovery controller, metrics, and reproducibility checklist. The research focus remains falsification-first: every additional subsystem must earn its complexity against matched baselines.
