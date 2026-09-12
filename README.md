@@ -4,24 +4,22 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 10 — End-to-End Memory, Workspace, Continual-State, and Reliability Audit**
+**Milestone 11 — Formal End-to-End Prototype Specification**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 10 findings
+### Milestone 11 findings
 
-- The architecture is best modeled as a stateful partially observable system connecting private specialists, typed latent bridges, bounded workspace, persistent memory, adaptive routing, verification, and recovery.
-- Workspace and persistent memory must remain distinct: workspace is bounded/transient coordination state, while memory is durable/versioned state with provenance and access policy.
-- Positive transfer and interference must be measured separately; adding organs is not expected to monotonically improve intelligence.
-- Persistent memory introduces a security boundary: recent work demonstrates memory poisoning can cause durable behavioral drift, so provenance and write validation are first-class design requirements.
-- Memory age is not a correctness certificate. Staleness must be evaluated against current task distributions.
-- The router is itself an adaptive state component; router drift can alter behavior even when specialist parameters remain fixed.
-- Specialist recovery must be distinguished into checkpoint restoration, replica restoration, teacher-guided reconstruction, hypernetwork reconstruction, and functional relearning.
-- Behavioral regeneration must be evaluated against a defined future task family and tolerance; parameter similarity is not equivalent to behavioral equivalence.
-- Common-mode failures can defeat nominal specialist redundancy when organs share routers, workspaces, memory infrastructure, embeddings, hypernetworks, data or hardware dependencies.
-- Reliability-aware routing can be posed as a constrained utility optimization, but risk estimates must themselves be calibrated and stress-tested.
-- Consensus is appropriate only for semantically shareable variables such as health metadata, protocol versions or checkpoint identifiers; forcing heterogeneous specialist representations to consensus can destroy specialization.
-- A small controlled prototype is now justified as a falsification instrument, but this does not validate the complete Cognitive Holobiont thesis.
+- The first prototype should be a small falsification instrument, not a claim of AGI or consciousness.
+- The minimal architecture is `specialists → typed latent bridges → bounded workspace → selective versioned memory → adaptive router → verification`, with recovery added only after clean baselines are reproducible.
+- B0–B3 isolate decomposition, communication, workspace and memory before adding faults or self-modification.
+- Communication must be evaluated as a utility/bandwidth Pareto frontier, not merely by benchmark accuracy.
+- The router is an adaptive state component; routing drift must be measured independently from specialist parameter drift.
+- Memory writes require validation, authorization, provenance and versioned commit; retrieval is not a truth certificate.
+- Recovery is hierarchical: checkpoint/replica restoration differs fundamentally from teacher-guided reconstruction, hypernetwork reconstruction and functional relearning.
+- End-to-end latency and cost must include communication, retrieval, verification and recovery overhead rather than relying on FLOPs alone.
+- Byzantine and poisoning experiments should be delayed until the clean architecture is causally understood; heterogeneous honest behavior must not be confused with attacks.
+- Self-modification, evolutionary search and strong regeneration claims remain outside the first prototype because they introduce major confounders.
 
 ## Research dossier
 
@@ -35,6 +33,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/07_milestone_08_memory_continual_learning_persistence_audit.md` — memory stores, continual learning, retrieval, consolidation, forgetting, provenance, stale/poisoned memory, rollback, information limits, and safe incremental updates.
 - `research/08_milestone_09_multimodal_global_workspace_routing_audit.md` — multimodal fusion, workspace formalization, broadcast/working-memory distinctions, missing modalities, reliability-aware routing, causal attribution, communication budgets, and controlled experiments.
 - `research/09_milestone_10_end_to_end_memory_workspace_reliability_audit.md` — end-to-end state model, memory/workspace separation, persistent-memory security, router stability, information limits, recovery hierarchy, correlated failures, reliability-aware routing, and hypotheses H22–H27.
+- `research/10_milestone_11_formal_end_to_end_prototype_specification.md` — concrete B0–B7 prototype specification, bridge/workspace/router/memory objectives, recovery hierarchy, failure taxonomy, complexity accounting, falsification criteria, hypotheses H28–H34, and implementation gate.
 
 ## Methodology
 
@@ -76,6 +75,8 @@ Calibration/OOD: Guo et al. (2017); Lakshminarayanan et al. (2017); Lee et al. (
 
 Federated learning/security: McMahan et al. (2017); Bonawitz et al. (2017); privacy/security surveys.
 
+Recent Milestone 11 sources: Zhou et al. (2022), Expert Choice Routing, https://arxiv.org/abs/2202.09368; Karimireddy, He & Jaggi (2020), heterogeneous Byzantine robustness, https://arxiv.org/abs/2006.09365; Yin et al. (2018), https://arxiv.org/abs/1803.01498; Xu, Guo & Wei (2025), selective conformal risk control, https://arxiv.org/abs/2512.12844; Bao et al. (2024), online selective conformal prediction, https://arxiv.org/abs/2403.07728; Tavakoli et al. (2025), BEAM long-term memory benchmark, https://arxiv.org/abs/2510.27246; Wei et al. (2025), Evo-Memory, https://arxiv.org/abs/2511.20857; Li et al. (2026), LycheeMemory V2, https://arxiv.org/abs/2608.12990; Zhao et al. (2026), structured long-term agent memory, https://arxiv.org/abs/2607.16211; Gandhi & Kozyrakis (2026), sparse MoE checkpointing, https://www.usenix.org/conference/nsdi26/presentation/gandhi; Deng et al. (2025), distributed fault detection, https://www.usenix.org/conference/nsdi25/presentation/deng; Chen et al. (2026), role-based RL fault tolerance, https://www.usenix.org/conference/osdi26/presentation/chen-zhenqian; Foerster et al. (2016), https://arxiv.org/abs/1605.06676.
+
 ## Current evidence position
 
 The most defensible near-term interpretation is a **fault-aware modular inference system with explicit detection, isolation, recovery, verification, learned inter-organ communication loops, a bounded shared workspace, and stateful memory**. Its individual building blocks have substantial prior literature. The composition remains an empirical research question.
@@ -84,4 +85,4 @@ Claims of universal regeneration, literal immortality, zero downtime, consciousn
 
 ## Next milestone
 
-**Milestone 11:** build the formal end-to-end prototype specification from the now-separated state components, with exact specialist tasks, bridge interfaces, workspace protocol, memory schema, routing objective, failure injection, recovery controller, metrics, and reproducibility checklist. The research focus remains falsification-first: every additional subsystem must earn its complexity against matched baselines.
+**Milestone 12:** formalize the mathematical learning objectives and optimization dynamics for B0–B3, including bridge training, workspace update equations, sparse routing/load balancing, memory write/read objectives, information-budget constraints, and capacity-matched baseline construction. The purpose is to remove remaining implementation ambiguity before coding and to identify any objective that is ill-posed or permits degenerate solutions.
