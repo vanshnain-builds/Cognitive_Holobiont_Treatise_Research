@@ -4,22 +4,23 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 12 — Learning Objectives, Optimization Dynamics, and Capacity-Matched Baselines**
+**Milestone 13 — Information-Flow, Rate–Distortion, Identifiability, and Coupled Optimization Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 12 findings
+### Milestone 13 findings
 
-- The remaining pre-implementation risk is objective misspecification: a mathematically valid loss can optimize a property that does not correspond to system-level utility.
-- B0–B3 are now formalized as a constrained multi-objective stack over utility, compute, communication, risk, representation quality, and memory behavior.
-- Learned latent alignment must include task-preservation/anti-collapse controls; alignment alone can admit degenerate representations.
-- A bounded workspace is a finite latent bottleneck, not evidence of a necessary cognitive substrate.
-- Router entropy is not a health metric; low entropy may mean useful specialization or collapse, while high entropy may mean uncertainty or waste.
-- Load balancing must be treated as a capacity/utility problem rather than universal uniform expert usage.
-- Memory write quality, provenance, authorization, staleness, and retrieval utility are separate dimensions; retrieval similarity is not truth.
-- Continual learning must measure forgetting and transfer separately from parameter stability.
-- Capacity-matched controls must account for active FLOPs, parameters, memory, communication, wall-clock latency, and training budget.
-- No complete Holobiont implementation should begin until B0–B3 configurations and primary metrics are fixed; recovery, Byzantine behavior, and self-modification remain downstream experiments.
+- The strongest defensible interpretation is a task-oriented distributed representation system with finite communication and memory budgets; the composition remains empirical.
+- Bridge quality must be evaluated by downstream task utility and excess risk, not latent-coordinate agreement alone.
+- Data-processing and rate–distortion results constrain what can survive a finite communication channel, but lower bandwidth does not imply better cognition.
+- A finite latent workspace is a computational bottleneck; its dimension alone does not define Shannon capacity without a channel, noise, quantization, range, or precision model.
+- Shared latent representations are not uniquely semantic without explicit task definitions and identifiability assumptions.
+- Mutual-information estimates in high dimensions are diagnostics requiring estimator sensitivity analysis, not ground truth measurements.
+- Router entropy is not health; router stability requires analysis of coupled state, perturbation sensitivity, churn, and load.
+- Memory sufficiency should be defined by future task risk, not by storage size or retrieval similarity.
+- Continual-learning interference can move from specialists into shared bridges, workspace, router, and persistent memory.
+- The correct system-level objective is a constrained/Pareto optimization over task risk, communication, compute, memory, latency, and reliability rather than an undefined scalar “cognitive efficiency”.
+- B0–B3 remain the appropriate first implementation gate; downstream recovery, Byzantine, regeneration, and self-modification should remain isolated until the basic information/utility claims survive controlled ablations.
 
 ## Research dossier
 
@@ -35,6 +36,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/09_milestone_10_end_to_end_memory_workspace_reliability_audit.md` — end-to-end state model, memory/workspace separation, persistent-memory security, router stability, information limits, recovery hierarchy, correlated failures, reliability-aware routing, and hypotheses H22–H27.
 - `research/10_milestone_11_formal_end_to_end_prototype_specification.md` — concrete B0–B7 prototype specification, bridge/workspace/router/memory objectives, recovery hierarchy, failure taxonomy, complexity accounting, falsification criteria, hypotheses H28–H34, and implementation gate.
 - `research/11_milestone_12_learning_objectives_optimization_audit.md` — formal B0–B3 learning objectives, bridge/workspace/router/memory optimization, anti-collapse and gradient-conflict diagnostics, capacity matching, information-budget constraints, hypotheses H35–H41, and the pre-implementation decision gate.
+- `research/12_milestone_13_information_flow_optimization_bounds_audit.md` — coupled information-flow model, rate–distortion and finite-bit constraints, latent identifiability, workspace capacity, routing stability, memory sufficiency, gradient conflict, Pareto objectives, hypotheses H42–H48, and preregistration requirements.
 
 ## Methodology
 
@@ -46,7 +48,7 @@ The project does not treat biological analogy as proof. Reliability, regeneratio
 
 ## Implementation gate
 
-Implementation follows specification. Before the first serious prototype, the benchmark must fix the task/data split, specialist roles and model versions, bridge/routing definitions, objective functions, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace size and token capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. For multimodal routing, causal intervention controls must be defined before interpreting attention or routing weights. Milestone 12 additionally requires explicit loss terms, gradient diagnostics, capacity matching, and checks for degenerate optima before coding.
+Implementation follows specification. Before the first serious prototype, the benchmark must fix the task/data split, specialist roles and model versions, bridge/routing definitions, objective functions, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace size and token capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. For multimodal routing, causal intervention controls must be defined before interpreting attention or routing weights. Milestone 12 additionally requires explicit loss terms, gradient diagnostics, capacity matching, and checks for degenerate optima before coding. Milestone 13 additionally requires an explicit channel/coding model whenever information capacity or rate–distortion quantities are reported, task-risk definitions for communicated representations, and sensitivity analysis for any neural mutual-information estimator.
 
 ## Key literature anchors
 
@@ -80,12 +82,14 @@ Recent Milestone 11 sources: Zhou et al. (2022), Expert Choice Routing, https://
 
 Recent Milestone 12 sources: Fedus, Zoph & Shazeer (2022), Switch Transformers, https://jmlr.org/papers/v23/21-0998.html; Zhou et al. (2022), Expert Choice Routing, https://arxiv.org/abs/2202.09368; Zoph et al. (2022), ST-MoE, https://arxiv.org/abs/2202.08906; Jaegle et al. (2021), Perceiver, https://arxiv.org/abs/2103.03206; Alemi et al. (2016), Deep Variational Information Bottleneck, https://arxiv.org/abs/1612.00410; Liu et al. (2021), Conflict-Averse Gradient Descent, https://arxiv.org/abs/2110.14048; Hwang et al. (2024), source-reliability-aware RAG, https://arxiv.org/abs/2410.22954; Zou et al. (2026), environment-injected memory poisoning, https://arxiv.org/abs/2604.02623; Gao et al. (2026), MemPoison, https://arxiv.org/abs/2607.14651.
 
+Recent Milestone 13 sources: Tishby, Pereira & Bialek (2000), https://arxiv.org/abs/physics/0004057; Alemi et al. (2016), https://arxiv.org/abs/1612.00410; Alemi et al. (2018), Fixing a Broken ELBO, https://arxiv.org/abs/1711.00464; Shao, Mao & Zhang, task-oriented communication, https://arxiv.org/abs/2102.04170; Balcan et al., distributed learning/communication complexity/privacy, https://arxiv.org/abs/1204.3514; Mölter & Goodhill (2020), https://www.mdpi.com/1099-4300/22/4/490; Hyvärinen & Morioka (2017), https://proceedings.mlr.press/v54/hyvarinen17a.html; Hyvärinen, Khemakhem & Monti (2023), https://doi.org/10.1007/s10463-023-00884-4; Yao et al. (2024), https://openreview.net/forum?id=6YpW4G8L1j; Jaegle et al. (2021), https://arxiv.org/abs/2103.03206; Bao et al. (2020), https://arxiv.org/abs/2001.09485; Fedus et al. (2022), https://jmlr.org/papers/v23/21-0998.html; Zhou et al. (2022), https://arxiv.org/abs/2202.09368; Liu et al. (2021), https://arxiv.org/abs/2110.14048; Gopalan et al. (2025), https://machinelearning.apple.com/research/communication-complexity.
+
 ## Current evidence position
 
 The most defensible near-term interpretation is a **fault-aware modular inference system with explicit detection, isolation, recovery, verification, learned inter-organ communication loops, a bounded shared workspace, and stateful memory**. Its individual building blocks have substantial prior literature. The composition remains an empirical research question.
 
-Claims of universal regeneration, literal immortality, zero downtime, consciousness from global workspace, universal spectral-gap/cognition relationships, fixed compute/latency improvements, spontaneous AGI-level evolution, indefinite exact memory, and automatic correctness of retrieved memories remain unsupported hypotheses rather than established outcomes.
+Claims of universal regeneration, literal immortality, zero downtime, consciousness from global workspace, universal spectral-gap/cognition relationships, fixed compute/latency improvements, spontaneous AGI-level evolution, indefinite exact memory, automatic correctness of retrieved memories, and universal semantic meaning of latent coordinates remain unsupported hypotheses rather than established outcomes.
 
 ## Next milestone
 
-**Milestone 13:** formalize the bridge/workspace/memory information-flow and optimization coupling as a single constrained system; derive identifiability, rate-distortion/information-budget implications, routing stability conditions, and measurable lower/upper bounds for the B0–B3 prototype. The objective is to determine which quantities can be theoretically bounded before empirical implementation and to finalize a minimal preregistration-ready configuration without introducing downstream fault/recovery confounders.
+**Milestone 14:** derive and audit the reliability/decision layer that sits above B0–B3: calibration, selective prediction/abstention, OOD detection, uncertainty aggregation across organs, confidence under correlated evidence, and decision-theoretic deferral. The goal is to determine whether a mathematically defensible “health/confidence” variable can govern routing, memory writes, and recovery without conflating uncertainty, disagreement, or novelty.
