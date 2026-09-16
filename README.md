@@ -4,23 +4,23 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 14 — Reliability, Selective Prediction, Calibration, OOD, and Decision-Layer Audit**
+**Milestone 15 — Adversarial Reliability-Layer Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 14 findings
+### Milestone 15 findings
 
-- There is no generally valid scalar "health" variable; reliability should be represented as separately characterized signals plus an action policy.
-- Calibration, uncertainty, OOD/novelty, disagreement, selective risk, provenance, drift, and decision cost are distinct quantities.
-- Selective prediction gives a formal risk–coverage framework and is the correct abstraction for abstention/deferral.
-- Calibration does not imply correctness, and calibration can degrade under distribution shift.
-- OOD detection is a distinct detection problem; OOD is not synonymous with error.
-- Inter-organ disagreement is not a Byzantine label; honest heterogeneous specialists can disagree.
-- Consensus can become confidently wrong under common-mode corruption.
-- Deep ensembles provide useful uncertainty signals but are not an uncertainty oracle.
-- Conformal/selective methods can provide finite-sample or PAC-style guarantees only for explicitly defined quantities under their stated statistical assumptions.
-- Memory-write, routing, quarantine, and recovery should have distinct decision gates rather than sharing a generic confidence threshold.
-- The next reliability experiment should be an offline B4 decision layer over frozen B0–B3 outputs before autonomous recovery is attempted.
+- The B4 reliability/decision layer is itself an attack surface and must not be treated as a trusted oracle.
+- Confidence, uncertainty, OOD scores, disagreement, provenance, drift, and selective coverage can each be manipulated or become misleading under adaptive attacks.
+- Standard conformal guarantees require explicit exchangeability/statistical assumptions and do not automatically survive calibration poisoning or adversarial test-time perturbations.
+- Robust conformal methods can recover guarantees for narrowly specified threat models, but this is not universal adversarial robustness.
+- Persistent memory is a durable attack surface: malicious records can survive across sessions and influence later behavior, including through compositional or trigger-conditioned retrieval.
+- Cryptographic provenance establishes origin/integrity metadata, not semantic truth or safety.
+- Disagreement remains a weak fault signal when honest specialists are heterogeneous; attackers can target either false disagreement or false consensus.
+- Correlated/common-mode corruption can make multiple organs agree on the same wrong state.
+- Byzantine/non-IID literature reinforces the need to distinguish heterogeneity from malicious behavior.
+- The correct robustness object is an explicitly defined decision policy under an explicitly defined attacker class, not a universal scalar health score.
+- Autonomous self-modification/recovery remains gated until adversarial reliability experiments demonstrate measurable safety value at matched clean utility and resource budgets.
 
 ## Research dossier
 
@@ -38,6 +38,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/11_milestone_12_learning_objectives_optimization_audit.md` — formal B0–B3 learning objectives, bridge/workspace/router/memory optimization, anti-collapse and gradient-conflict diagnostics, capacity matching, information-budget constraints, hypotheses H35–H41, and the pre-implementation decision gate.
 - `research/12_milestone_13_information_flow_optimization_bounds_audit.md` — coupled information-flow model, rate–distortion and finite-bit constraints, latent identifiability, workspace capacity, routing stability, memory sufficiency, gradient conflict, Pareto objectives, hypotheses H42–H48, and preregistration requirements.
 - `research/13_milestone_14_reliability_decision_layer_audit.md` — calibration, selective prediction, OOD detection, uncertainty aggregation, correlated/common-mode evidence, conformal risk control, decision-aware deferral/recovery, hypotheses H49–H55, and the B4 decision-layer gate.
+- `research/14_milestone_15_adversarial_reliability_layer_audit.md` — adaptive attacks against confidence/OOD/disagreement signals, conformal and calibration poisoning, persistent-memory poisoning, router manipulation, common-mode attacks, robust decision objectives, hypotheses H56–H63, and adversarial B4 experiments.
 
 ## Methodology
 
@@ -49,7 +50,7 @@ The project does not treat biological analogy as proof. Reliability, regeneratio
 
 ## Implementation gate
 
-Implementation follows specification. Before the first serious prototype, the benchmark must fix the task/data split, specialist roles and model versions, bridge/routing definitions, objective functions, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace size and token capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. For multimodal routing, causal intervention controls must be defined before interpreting attention or routing weights. Milestone 12 additionally requires explicit loss terms, gradient diagnostics, capacity matching, and checks for degenerate optima before coding. Milestone 13 additionally requires an explicit channel/coding model whenever information capacity or rate–distortion quantities are reported, task-risk definitions for communicated representations, and sensitivity analysis for any neural mutual-information estimator. Milestone 14 additionally requires separate calibration/OOD/selective-risk evaluation, common-mode-fault tests, explicit decision costs, and exact assumptions for any conformal guarantee.
+Implementation follows specification. Before the first serious prototype, the benchmark must fix the task/data split, specialist roles and model versions, bridge/routing definitions, objective functions, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace size and token capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. For multimodal routing, causal intervention controls must be defined before interpreting attention or routing weights. Milestone 12 additionally requires explicit loss terms, gradient diagnostics, capacity matching, and checks for degenerate optima before coding. Milestone 13 additionally requires an explicit channel/coding model whenever information capacity or rate–distortion quantities are reported, task-risk definitions for communicated representations, and sensitivity analysis for any neural mutual-information estimator. Milestone 14 additionally requires separate calibration/OOD/selective-risk evaluation, common-mode-fault tests, explicit decision costs, and exact assumptions for any conformal guarantee. Milestone 15 additionally requires adaptive attacker models, attack-budget sweeps, calibration-poisoning tests, detector-evasion tests, router manipulation tests, memory-poisoning persistence tests, common-mode attacks, and matched clean-utility/resource comparisons.
 
 ## Key literature anchors
 
@@ -89,12 +90,14 @@ Recent Milestone 13 sources: Tishby, Pereira & Bialek (2000), https://arxiv.org/
 
 Recent Milestone 14 sources: Guo et al. (2017), calibration, https://proceedings.mlr.press/v70/guo17a.html; Hendrycks & Gimpel (2017), OOD baseline, https://arxiv.org/abs/1610.02136; Lakshminarayanan et al. (2017), deep ensembles, https://arxiv.org/abs/1612.01474; Geifman & El-Yaniv (2019), SelectiveNet, https://proceedings.mlr.press/v97/geifman19a.html; Xu, Guo & Wei (2026), SCRC, https://arxiv.org/abs/2512.12844; Bai & Jin (2026), SCoRE, https://arxiv.org/abs/2603.24704; Sokol, Moniz & Chawla (2026), conformalized selective regression, https://doi.org/10.1007/s44248-026-00113-2; Kwon & Kim (2026), cost-aware deferral under shift, https://www.nature.com/articles/s41598-026-40637-w; Rahaman & Thiery (2020), deep ensembles and calibration, https://arxiv.org/abs/2007.08792; Zhang, Kailkhura & Han (2020), Mix-n-Match calibration, https://arxiv.org/abs/2003.07329.
 
+Recent Milestone 15 sources: Fort (2022), adversarial OOD vulnerability, https://arxiv.org/abs/2201.07012; Sehwag et al. (2019), OOD adversarial examples, https://arxiv.org/abs/1905.01726; ACM Computing Surveys (2025), OOD/adversarial intersection, https://doi.org/10.1145/3719292; Tuna, Catak & Eskil (2023), uncertainty attacks/defenses, https://doi.org/10.1007/s40747-022-00701-0; Qin et al. (2023), uncertainty-based dynamic ensemble selection, https://arxiv.org/abs/2308.00346; Scholten & Günnemann (ICLR 2025), poisoning-robust conformal prediction, https://arxiv.org/abs/2410.09878; Zargarbashi et al. (ICML 2024), robust conformal sets, https://proceedings.mlr.press/v235/h-zargarbashi24a.html; VRCP (2025), https://doi.org/10.1016/j.patcog.2025.112051; MemoryGraft (2025), https://arxiv.org/abs/2512.16962; Dash et al. (2026), memory poisoning benchmark, https://arxiv.org/abs/2606.04329; Gao et al. (2026), MemPoison, https://arxiv.org/abs/2607.14651; Sharma (2026), SMSR, https://arxiv.org/abs/2606.12703; Liu et al. (2023), heterogeneous Byzantine robustness, https://arxiv.org/abs/2302.06079; Zhai et al. (2022), https://doi.org/10.3934/mbe.2022078; BPFLH (2026), https://doi.org/10.1109/TDSC.2026.3661522.
+
 ## Current evidence position
 
-The most defensible near-term interpretation is a **fault-aware modular inference system with explicit detection, isolation, recovery, verification, learned inter-organ communication loops, a bounded shared workspace, stateful memory, and a decision layer that separately models uncertainty, novelty, calibration, disagreement, provenance, and operational cost**. Its individual building blocks have substantial prior literature. The composition remains an empirical research question.
+The most defensible near-term interpretation is a **fault-aware modular inference system with explicit detection, isolation, recovery, verification, learned inter-organ communication loops, a bounded shared workspace, stateful memory, and a decision layer that separately models uncertainty, novelty, calibration, disagreement, provenance, drift, and operational cost — while treating all of those signals as potentially attackable**. Its individual building blocks have substantial prior literature. The composition and adversarial robustness remain empirical research questions.
 
-Claims of universal regeneration, literal immortality, zero downtime, consciousness from global workspace, universal spectral-gap/cognition relationships, fixed compute/latency improvements, spontaneous AGI-level evolution, indefinite exact memory, automatic correctness of retrieved memories, automatic fault attribution from disagreement, and a universal scalar health variable remain unsupported hypotheses rather than established outcomes.
+Claims of universal regeneration, literal immortality, zero downtime, consciousness from global workspace, universal spectral-gap/cognition relationships, fixed compute/latency improvements, spontaneous AGI-level evolution, indefinite exact memory, automatic correctness of retrieved memories, automatic fault attribution from disagreement, a universal scalar health variable, and adversarially trustworthy uncertainty/OOD signals remain unsupported hypotheses rather than established outcomes.
 
 ## Next milestone
 
-**Milestone 15:** audit adversarial robustness and adaptive attacks against the B4 reliability/decision layer itself: confidence manipulation, calibration attacks, OOD-detector evasion, disagreement poisoning, conformal/calibration-set contamination, memory poisoning, router manipulation, and common-mode attacks. The goal is to determine whether the reliability layer can remain useful when an adversary explicitly targets its signals rather than only the underlying specialists.
+**Milestone 16:** formalize and audit the **recovery/verification layer under adaptive compromise**: verifier independence, checkpoint integrity, state reconstruction vs. behavioral recovery, recovery-point/recovery-time tradeoffs, common-mode verifier failure, Byzantine recovery policies, and whether any meaningful end-to-end recovery guarantee can be proved under bounded fault and attack assumptions.
