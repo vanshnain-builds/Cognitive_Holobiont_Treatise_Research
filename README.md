@@ -4,23 +4,24 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 15 — Adversarial Reliability-Layer Audit**
+**Milestone 16 — Recovery, Verification, and Adaptive Compromise Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 15 findings
+### Milestone 16 findings
 
-- The B4 reliability/decision layer is itself an attack surface and must not be treated as a trusted oracle.
-- Confidence, uncertainty, OOD scores, disagreement, provenance, drift, and selective coverage can each be manipulated or become misleading under adaptive attacks.
-- Standard conformal guarantees require explicit exchangeability/statistical assumptions and do not automatically survive calibration poisoning or adversarial test-time perturbations.
-- Robust conformal methods can recover guarantees for narrowly specified threat models, but this is not universal adversarial robustness.
-- Persistent memory is a durable attack surface: malicious records can survive across sessions and influence later behavior, including through compositional or trigger-conditioned retrieval.
-- Cryptographic provenance establishes origin/integrity metadata, not semantic truth or safety.
-- Disagreement remains a weak fault signal when honest specialists are heterogeneous; attackers can target either false disagreement or false consensus.
-- Correlated/common-mode corruption can make multiple organs agree on the same wrong state.
-- Byzantine/non-IID literature reinforces the need to distinguish heterogeneity from malicious behavior.
-- The correct robustness object is an explicitly defined decision policy under an explicitly defined attacker class, not a universal scalar health score.
-- Autonomous self-modification/recovery remains gated until adversarial reliability experiments demonstrate measurable safety value at matched clean utility and resource budgets.
+- Recovery must be defined behaviorally and operationally; restoring bytes is not equivalent to restoring correctness.
+- RPO, RTO, behavioral recovery error, recovery cost, and communication cost must be measured separately.
+- A verifier sharing a failure domain with the recovery generator or reference can approve a common-mode-corrupted state.
+- Classical Byzantine agreement and self-stabilization provide useful formal templates, but their guarantees require explicit protocol, topology, synchrony, authentication, and fault assumptions.
+- The rule `n > 3f` is not a universal Holobiont recovery theorem; thresholds depend on the exact distributed protocol and attacker/channel model.
+- Hypernetwork regeneration is an established weight-generation technique, but arbitrary exact recovery of a lost specialist is unsupported without assumptions on the hypothesis class and surviving information.
+- Self-stabilization is a formal convergence property, not a synonym for having restart or healing code.
+- Trusted checkpoints/replicas should generally precede learned regeneration in the recovery hierarchy when they exist.
+- Cryptographic integrity authenticates an artifact's provenance/integrity metadata; it does not prove semantic correctness.
+- More replicas do not automatically provide independent evidence because shared ancestors, data, code, models, infrastructure, or keys can create common-mode failure.
+- Recovery-loop poisoning and verifier compromise are first-class attack surfaces.
+- Autonomous regeneration/self-modification remains gated until recovery experiments demonstrate measurable benefit at matched clean utility and resource budgets.
 
 ## Research dossier
 
@@ -39,6 +40,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/12_milestone_13_information_flow_optimization_bounds_audit.md` — coupled information-flow model, rate–distortion and finite-bit constraints, latent identifiability, workspace capacity, routing stability, memory sufficiency, gradient conflict, Pareto objectives, hypotheses H42–H48, and preregistration requirements.
 - `research/13_milestone_14_reliability_decision_layer_audit.md` — calibration, selective prediction, OOD detection, uncertainty aggregation, correlated/common-mode evidence, conformal risk control, decision-aware deferral/recovery, hypotheses H49–H55, and the B4 decision-layer gate.
 - `research/14_milestone_15_adversarial_reliability_layer_audit.md` — adaptive attacks against confidence/OOD/disagreement signals, conformal and calibration poisoning, persistent-memory poisoning, router manipulation, common-mode attacks, robust decision objectives, hypotheses H56–H63, and adversarial B4 experiments.
+- `research/15_milestone_16_recovery_verification_adaptive_compromise_audit.md` — recovery hierarchy, behavioral verification, RPO/RTO, verifier independence, common-mode recovery failure, Byzantine/self-stabilization assumptions, regeneration limits, attack surfaces, hypotheses H64–H71, and recovery experiments.
 
 ## Methodology
 
@@ -50,54 +52,38 @@ The project does not treat biological analogy as proof. Reliability, regeneratio
 
 ## Implementation gate
 
-Implementation follows specification. Before the first serious prototype, the benchmark must fix the task/data split, specialist roles and model versions, bridge/routing definitions, objective functions, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace size and token capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. For multimodal routing, causal intervention controls must be defined before interpreting attention or routing weights. Milestone 12 additionally requires explicit loss terms, gradient diagnostics, capacity matching, and checks for degenerate optima before coding. Milestone 13 additionally requires an explicit channel/coding model whenever information capacity or rate–distortion quantities are reported, task-risk definitions for communicated representations, and sensitivity analysis for any neural mutual-information estimator. Milestone 14 additionally requires separate calibration/OOD/selective-risk evaluation, common-mode-fault tests, explicit decision costs, and exact assumptions for any conformal guarantee. Milestone 15 additionally requires adaptive attacker models, attack-budget sweeps, calibration-poisoning tests, detector-evasion tests, router manipulation tests, memory-poisoning persistence tests, common-mode attacks, and matched clean-utility/resource comparisons.
+Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Causal intervention controls are required before interpreting attention or routing weights. Milestone 12 requires explicit loss terms, gradient diagnostics, capacity matching, and degenerate-optimum checks. Milestone 13 requires an explicit channel/coding model for information capacity or rate–distortion quantities, task-risk definitions for communicated representations, and sensitivity analysis for neural mutual-information estimators. Milestone 14 requires separate calibration/OOD/selective-risk evaluation, common-mode-fault tests, explicit decision costs, and exact conformal assumptions. Milestone 15 requires adaptive attacker models, attack-budget sweeps, calibration-poisoning tests, detector-evasion tests, router manipulation, memory-poisoning persistence, common-mode attacks, and matched clean-utility/resource comparisons. Milestone 16 additionally requires behavioral recovery tests, trusted-state lineage, verifier failure-domain analysis, checkpoint/replica integrity tests, RPO/RTO accounting, recovery-loop poisoning tests, common-mode verifier attacks, and statistical confidence on recovery error.
 
 ## Key literature anchors
 
-Sparse MoE: Shazeer et al. (2017); Switch Transformers (Fedus, Zoph & Shazeer). https://www.jmlr.org/papers/v23/21-0998.html
+Sparse MoE: Shazeer et al. (2017); Fedus, Zoph & Shazeer, Switch Transformers. https://jmlr.org/papers/v23/21-0998.html
 
 Hypernetworks: Ha, Dai & Le (2016). https://arxiv.org/abs/1609.09106
 
-Learned communication: Foerster et al. (2016).
+Learned communication: Foerster et al. (2016). https://arxiv.org/abs/1605.06676
 
-Global workspace: Devillers, Maytie & VanRullen, https://arxiv.org/abs/2306.15711; Bao et al., https://arxiv.org/abs/2001.09485; cognitive workspace review literature.
+Global workspace: Devillers, Maytie & VanRullen. https://arxiv.org/abs/2306.15711; Bao et al. https://arxiv.org/abs/2001.09485
 
-Contrastive representation learning: Chen et al. (2020) https://proceedings.mlr.press/v119/chen20j.html; Parulekar et al. (2023) https://proceedings.mlr.press/v195/parulekar23a.html; Zimmermann et al. (2021) https://proceedings.mlr.press/v139/zimmermann21a.html
+Contrastive representation learning: Chen et al. (2020). https://proceedings.mlr.press/v119/chen20j.html; Parulekar et al. (2023). https://proceedings.mlr.press/v195/parulekar23a.html; Zimmermann et al. (2021). https://proceedings.mlr.press/v139/zimmermann21a.html
 
-Cross-modal alignment/fusion: Zhao, Zhang & Geng, Deep Multimodal Data Fusion (2024), https://doi.org/10.1145/3649447; Radford et al. (2021), CLIP, https://arxiv.org/abs/2103.00020
+Cross-modal alignment/fusion: Zhao, Zhang & Geng (2024). https://doi.org/10.1145/3649447; Radford et al. (2021), CLIP. https://arxiv.org/abs/2103.00020
 
-Missing modalities: Wu et al. (2024), https://arxiv.org/abs/2409.07825; Lee et al., differentiable multimodal filters, https://arxiv.org/abs/2010.13021
+Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Knoblauch et al. (2020).
 
-Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Mallya & Lazebnik (2018); Farajtabar et al. (2020); Knoblauch et al. (2020); recent continual-learning theory and surveys.
+Memory systems: Lewis et al. (2020), RAG; Packer et al. (2023), MemGPT; Park et al. (2023), Generative Agents; Wang et al. (2023), LongMem.
 
-Memory systems: Lewis et al. (2020) RAG; Packer et al. (2023) MemGPT; Park et al. (2023) Generative Agents; Wang et al. (2023) LongMem; recent agent-memory and memory-security research.
+Byzantine-robust learning: Yin et al. (2018); Xie et al. (2020); Liu et al. (2023). https://arxiv.org/abs/2302.06079; Farhadkhani et al. (2024). https://arxiv.org/abs/2405.00491
 
-Byzantine-robust learning: Yin et al. (2018); Xie et al. (2020); Bao et al. (2024); Allouah et al. (2023); Qian et al. (2024).
+Calibration/OOD/selective prediction: Guo et al. (2017). https://proceedings.mlr.press/v70/guo17a.html; Hendrycks & Gimpel (2017). https://arxiv.org/abs/1610.02136; Geifman & El-Yaniv (2019). https://proceedings.mlr.press/v97/geifman19a.html
 
-Consensus: Olfati-Saber, Fax & Murray (2007); switching-topology consensus literature.
+Robust conformal prediction: Zargarbashi et al. (2024). https://proceedings.mlr.press/v235/h-zargarbashi24a.html; Scholten & Günnemann (2025). https://arxiv.org/abs/2410.09878; certifiably Byzantine-robust federated conformal prediction. https://arxiv.org/abs/2406.01960
 
-Calibration/OOD: Guo et al. (2017); Lakshminarayanan et al. (2017); Hendrycks & Gimpel (2017); Lee et al. (2018); Yang et al. (2021); Tu et al. (2024).
+Self-stabilization: Faghih et al. (2015). https://arxiv.org/abs/1509.05664; Blin, Petit & Tixeuil (2025). https://arxiv.org/abs/2505.06596
 
-Selective prediction and risk control: Geifman & El-Yaniv (2019), https://proceedings.mlr.press/v97/geifman19a.html; Xu, Guo & Wei (2026), https://arxiv.org/abs/2512.12844; Bai & Jin (2026), https://arxiv.org/abs/2603.24704.
+Recent recovery/Byzantine evidence: GRANITE (2025). https://arxiv.org/abs/2504.17471; Fault-Tolerant Federated Reinforcement Learning. https://arxiv.org/abs/2110.14074; Chen et al. (2026), Byzantine agreement under reorder/channel attacks. https://arxiv.org/abs/2609.09623
 
-Federated learning/security: McMahan et al. (2017); Bonawitz et al. (2017); privacy/security surveys.
+Hypernetwork continual learning: Partial Hypernetworks (2023). https://arxiv.org/abs/2306.10724; HyperInterval (2024). https://arxiv.org/abs/2405.15444
 
-Recent Milestone 11 sources: Zhou et al. (2022), Expert Choice Routing, https://arxiv.org/abs/2202.09368; Karimireddy, He & Jaggi (2020), heterogeneous Byzantine robustness, https://arxiv.org/abs/2006.09365; Yin et al. (2018), https://arxiv.org/abs/1803.01498; Xu, Guo & Wei (2025), selective conformal risk control, https://arxiv.org/abs/2512.12844; Bao et al. (2024), online selective conformal prediction, https://arxiv.org/abs/2403.07728; Tavakoli et al. (2025), BEAM long-term memory benchmark, https://arxiv.org/abs/2510.27246; Wei et al. (2025), Evo-Memory, https://arxiv.org/abs/2511.20857; Li et al. (2026), LycheeMemory V2, https://arxiv.org/abs/2608.12990; Zhao et al. (2026), structured long-term agent memory, https://arxiv.org/abs/2607.16211; Gandhi & Kozyrakis (2026), sparse MoE checkpointing, https://www.usenix.org/conference/nsdi26/presentation/gandhi; Deng et al. (2025), distributed fault detection, https://www.usenix.org/conference/nsdi25/presentation/deng; Chen et al. (2026), role-based RL fault tolerance, https://www.usenix.org/conference/osdi26/presentation/chen-zhenqian; Foerster et al. (2016), https://arxiv.org/abs/1605.06676.
+## Status
 
-Recent Milestone 12 sources: Fedus, Zoph & Shazeer (2022), Switch Transformers, https://jmlr.org/papers/v23/21-0998.html; Zhou et al. (2022), Expert Choice Routing, https://arxiv.org/abs/2202.09368; Zoph et al. (2022), ST-MoE, https://arxiv.org/abs/2202.08906; Jaegle et al. (2021), Perceiver, https://arxiv.org/abs/2103.03206; Alemi et al. (2016), Deep Variational Information Bottleneck, https://arxiv.org/abs/1612.00410; Liu et al. (2021), Conflict-Averse Gradient Descent, https://arxiv.org/abs/2110.14048; Hwang et al. (2024), source-reliability-aware RAG, https://arxiv.org/abs/2410.22954; Zou et al. (2026), environment-injected memory poisoning, https://arxiv.org/abs/2604.02623; Gao et al. (2026), MemPoison, https://arxiv.org/abs/2607.14651.
-
-Recent Milestone 13 sources: Tishby, Pereira & Bialek (2000), https://arxiv.org/abs/physics/0004057; Alemi et al. (2016), https://arxiv.org/abs/1612.00410; Alemi et al. (2018), Fixing a Broken ELBO, https://arxiv.org/abs/1711.00464; Shao, Mao & Zhang, task-oriented communication, https://arxiv.org/abs/2102.04170; Balcan et al., distributed learning/communication complexity/privacy, https://arxiv.org/abs/1204.3514; Mölter & Goodhill (2020), https://www.mdpi.com/1099-4300/22/4/490; Hyvärinen & Morioka (2017), https://proceedings.mlr.press/v54/hyvarinen17a.html; Hyvärinen, Khemakhem & Monti (2023), https://doi.org/10.1007/s10463-023-00884-4; Yao et al. (2024), https://openreview.net/forum?id=6YpW4G8L1j; Jaegle et al. (2021), https://arxiv.org/abs/2103.03206; Bao et al. (2020), https://arxiv.org/abs/2001.09485; Fedus et al. (2022), https://jmlr.org/papers/v23/21-0998.html; Zhou et al. (2022), https://arxiv.org/abs/2202.09368; Liu et al. (2021), https://arxiv.org/abs/2110.14048; Gopalan et al. (2025), https://machinelearning.apple.com/research/communication-complexity.
-
-Recent Milestone 14 sources: Guo et al. (2017), calibration, https://proceedings.mlr.press/v70/guo17a.html; Hendrycks & Gimpel (2017), OOD baseline, https://arxiv.org/abs/1610.02136; Lakshminarayanan et al. (2017), deep ensembles, https://arxiv.org/abs/1612.01474; Geifman & El-Yaniv (2019), SelectiveNet, https://proceedings.mlr.press/v97/geifman19a.html; Xu, Guo & Wei (2026), SCRC, https://arxiv.org/abs/2512.12844; Bai & Jin (2026), SCoRE, https://arxiv.org/abs/2603.24704; Sokol, Moniz & Chawla (2026), conformalized selective regression, https://doi.org/10.1007/s44248-026-00113-2; Kwon & Kim (2026), cost-aware deferral under shift, https://www.nature.com/articles/s41598-026-40637-w; Rahaman & Thiery (2020), deep ensembles and calibration, https://arxiv.org/abs/2007.08792; Zhang, Kailkhura & Han (2020), Mix-n-Match calibration, https://arxiv.org/abs/2003.07329.
-
-Recent Milestone 15 sources: Fort (2022), adversarial OOD vulnerability, https://arxiv.org/abs/2201.07012; Sehwag et al. (2019), OOD adversarial examples, https://arxiv.org/abs/1905.01726; ACM Computing Surveys (2025), OOD/adversarial intersection, https://doi.org/10.1145/3719292; Tuna, Catak & Eskil (2023), uncertainty attacks/defenses, https://doi.org/10.1007/s40747-022-00701-0; Qin et al. (2023), uncertainty-based dynamic ensemble selection, https://arxiv.org/abs/2308.00346; Scholten & Günnemann (ICLR 2025), poisoning-robust conformal prediction, https://arxiv.org/abs/2410.09878; Zargarbashi et al. (ICML 2024), robust conformal sets, https://proceedings.mlr.press/v235/h-zargarbashi24a.html; VRCP (2025), https://doi.org/10.1016/j.patcog.2025.112051; MemoryGraft (2025), https://arxiv.org/abs/2512.16962; Dash et al. (2026), memory poisoning benchmark, https://arxiv.org/abs/2606.04329; Gao et al. (2026), MemPoison, https://arxiv.org/abs/2607.14651; Sharma (2026), SMSR, https://arxiv.org/abs/2606.12703; Liu et al. (2023), heterogeneous Byzantine robustness, https://arxiv.org/abs/2302.06079; Zhai et al. (2022), https://doi.org/10.3934/mbe.2022078; BPFLH (2026), https://doi.org/10.1109/TDSC.2026.3661522.
-
-## Current evidence position
-
-The most defensible near-term interpretation is a **fault-aware modular inference system with explicit detection, isolation, recovery, verification, learned inter-organ communication loops, a bounded shared workspace, stateful memory, and a decision layer that separately models uncertainty, novelty, calibration, disagreement, provenance, drift, and operational cost — while treating all of those signals as potentially attackable**. Its individual building blocks have substantial prior literature. The composition and adversarial robustness remain empirical research questions.
-
-Claims of universal regeneration, literal immortality, zero downtime, consciousness from global workspace, universal spectral-gap/cognition relationships, fixed compute/latency improvements, spontaneous AGI-level evolution, indefinite exact memory, automatic correctness of retrieved memories, automatic fault attribution from disagreement, a universal scalar health variable, and adversarially trustworthy uncertainty/OOD signals remain unsupported hypotheses rather than established outcomes.
-
-## Next milestone
-
-**Milestone 16:** formalize and audit the **recovery/verification layer under adaptive compromise**: verifier independence, checkpoint integrity, state reconstruction vs. behavioral recovery, recovery-point/recovery-time tradeoffs, common-mode verifier failure, Byzantine recovery policies, and whether any meaningful end-to-end recovery guarantee can be proved under bounded fault and attack assumptions.
+The project remains **falsification-first and pre-implementation**. Milestone 16 does not validate autonomous self-healing, regeneration, or self-modification; it narrows those claims into explicit recovery objectives, threat models, statistical tests, and distributed-systems assumptions.
