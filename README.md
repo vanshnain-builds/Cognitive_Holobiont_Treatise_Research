@@ -4,24 +4,22 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 16 — Recovery, Verification, and Adaptive Compromise Audit**
+**Milestone 17 — Byzantine Graph Dynamics, Consensus, and Failure-Domain Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 16 findings
+### Milestone 17 findings
 
-- Recovery must be defined behaviorally and operationally; restoring bytes is not equivalent to restoring correctness.
-- RPO, RTO, behavioral recovery error, recovery cost, and communication cost must be measured separately.
-- A verifier sharing a failure domain with the recovery generator or reference can approve a common-mode-corrupted state.
-- Classical Byzantine agreement and self-stabilization provide useful formal templates, but their guarantees require explicit protocol, topology, synchrony, authentication, and fault assumptions.
-- The rule `n > 3f` is not a universal Holobiont recovery theorem; thresholds depend on the exact distributed protocol and attacker/channel model.
-- Hypernetwork regeneration is an established weight-generation technique, but arbitrary exact recovery of a lost specialist is unsupported without assumptions on the hypothesis class and surviving information.
-- Self-stabilization is a formal convergence property, not a synonym for having restart or healing code.
-- Trusted checkpoints/replicas should generally precede learned regeneration in the recovery hierarchy when they exist.
-- Cryptographic integrity authenticates an artifact's provenance/integrity metadata; it does not prove semantic correctness.
-- More replicas do not automatically provide independent evidence because shared ancestors, data, code, models, infrastructure, or keys can create common-mode failure.
-- Recovery-loop poisoning and verifier compromise are first-class attack surfaces.
-- Autonomous regeneration/self-modification remains gated until recovery experiments demonstrate measurable benefit at matched clean utility and resource budgets.
+- Consensus is agreement under a protocol; it is not semantic truth or recovery correctness.
+- Byzantine-robust learning and Byzantine agreement are related but non-equivalent problems with different assumptions and guarantees.
+- Honest specialist populations can be multimodal; distance from a single central update is therefore not a universal Byzantine predicate.
+- Dynamic routing is itself a security-critical state variable because an attacker can manipulate who communicates with whom even when specialists are individually uncompromised.
+- Spectral-gap convergence bounds apply to specified linear consensus dynamics, not automatically to nonlinear learned cognitive systems or “cognitive speed.”
+- Graph bottlenecks can restrict long-range information flow, but oversmoothing/communication failure is not universal and depends on architecture, topology, initialization, and task.
+- Replica count is not equivalent to independent evidence when replicas share data, code, checkpoint lineage, model family, infrastructure, or keys.
+- Privacy, integrity, availability, and Byzantine robustness are separate system properties and require separate threat models.
+- Adaptive topology can improve utility only if its benefit exceeds added communication, latency, and attack-surface costs.
+- A full distributed implementation should follow fixed-topology and single-variable topology controls so causal attribution remains possible.
 
 ## Research dossier
 
@@ -41,6 +39,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/13_milestone_14_reliability_decision_layer_audit.md` — calibration, selective prediction, OOD detection, uncertainty aggregation, correlated/common-mode evidence, conformal risk control, decision-aware deferral/recovery, hypotheses H49–H55, and the B4 decision-layer gate.
 - `research/14_milestone_15_adversarial_reliability_layer_audit.md` — adaptive attacks against confidence/OOD/disagreement signals, conformal and calibration poisoning, persistent-memory poisoning, router manipulation, common-mode attacks, robust decision objectives, hypotheses H56–H63, and adversarial B4 experiments.
 - `research/15_milestone_16_recovery_verification_adaptive_compromise_audit.md` — recovery hierarchy, behavioral verification, RPO/RTO, verifier independence, common-mode recovery failure, Byzantine/self-stabilization assumptions, regeneration limits, attack surfaces, hypotheses H64–H71, and recovery experiments.
+- `research/16_milestone_17_byzantine_graph_consensus_and_failure_domain_audit.md` — dynamic graph formalization, Byzantine learning vs agreement, heterogeneous honest specialists, routing attacks, graph bottlenecks, failure-domain diversity, privacy/robustness separation, hypotheses H72–H79, and distributed-implementation decision gates.
 
 ## Methodology
 
@@ -52,7 +51,7 @@ The project does not treat biological analogy as proof. Reliability, regeneratio
 
 ## Implementation gate
 
-Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Causal intervention controls are required before interpreting attention or routing weights. Milestone 12 requires explicit loss terms, gradient diagnostics, capacity matching, and degenerate-optimum checks. Milestone 13 requires an explicit channel/coding model for information capacity or rate–distortion quantities, task-risk definitions for communicated representations, and sensitivity analysis for neural mutual-information estimators. Milestone 14 requires separate calibration/OOD/selective-risk evaluation, common-mode-fault tests, explicit decision costs, and exact conformal assumptions. Milestone 15 requires adaptive attacker models, attack-budget sweeps, calibration-poisoning tests, detector-evasion tests, router manipulation, memory-poisoning persistence, common-mode attacks, and matched clean-utility/resource comparisons. Milestone 16 additionally requires behavioral recovery tests, trusted-state lineage, verifier failure-domain analysis, checkpoint/replica integrity tests, RPO/RTO accounting, recovery-loop poisoning tests, common-mode verifier attacks, and statistical confidence on recovery error.
+Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Causal intervention controls are required before interpreting attention or routing weights. Milestone 12 requires explicit loss terms, gradient diagnostics, capacity matching, and degenerate-optimum checks. Milestone 13 requires an explicit channel/coding model for information capacity or rate–distortion quantities, task-risk definitions for communicated representations, and sensitivity analysis for neural mutual-information estimators. Milestone 14 requires separate calibration/OOD/selective-risk evaluation, common-mode-fault tests, explicit decision costs, and exact conformal assumptions. Milestone 15 requires adaptive attacker models, attack-budget sweeps, calibration-poisoning tests, detector-evasion tests, router manipulation, memory-poisoning persistence, common-mode attacks, and matched clean-utility/resource comparisons. Milestone 16 additionally requires behavioral recovery tests, trusted-state lineage, verifier failure-domain analysis, checkpoint/replica integrity tests, RPO/RTO accounting, recovery-loop poisoning tests, common-mode verifier attacks, and statistical confidence on recovery error. Milestone 17 additionally requires dynamic-topology controls, explicit graph/consensus assumptions, heterogeneous-honest baselines, routing attack tests, failure-domain dependency analysis, topology/communication accounting, privacy-vs-robustness separation, and fixed-topology controls before adaptive-graph claims.
 
 ## Key literature anchors
 
@@ -72,7 +71,9 @@ Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Knoblauch et a
 
 Memory systems: Lewis et al. (2020), RAG; Packer et al. (2023), MemGPT; Park et al. (2023), Generative Agents; Wang et al. (2023), LongMem.
 
-Byzantine-robust learning: Yin et al. (2018); Xie et al. (2020); Liu et al. (2023). https://arxiv.org/abs/2302.06079; Farhadkhani et al. (2024). https://arxiv.org/abs/2405.00491
+Byzantine-robust learning: Yin et al. (2018); Xie et al. (2020); Liu et al. (2023). https://arxiv.org/abs/2302.06079; Farhadkhani et al. (2024). https://arxiv.org/abs/2405.00491; Parsa et al. (2025). https://arxiv.org/abs/2511.03529
+
+Federated heterogeneity/privacy: Yi et al. (2024), FedP3. https://arxiv.org/abs/2404.09816
 
 Calibration/OOD/selective prediction: Guo et al. (2017). https://proceedings.mlr.press/v70/guo17a.html; Hendrycks & Gimpel (2017). https://arxiv.org/abs/1610.02136; Geifman & El-Yaniv (2019). https://proceedings.mlr.press/v97/geifman19a.html
 
@@ -80,10 +81,12 @@ Robust conformal prediction: Zargarbashi et al. (2024). https://proceedings.mlr.
 
 Self-stabilization: Faghih et al. (2015). https://arxiv.org/abs/1509.05664; Blin, Petit & Tixeuil (2025). https://arxiv.org/abs/2505.06596
 
-Recent recovery/Byzantine evidence: GRANITE (2025). https://arxiv.org/abs/2504.17471; Fault-Tolerant Federated Reinforcement Learning. https://arxiv.org/abs/2110.14074; Chen et al. (2026), Byzantine agreement under reorder/channel attacks. https://arxiv.org/abs/2609.09623
+Dynamic Byzantine/distributed evidence: GRANITE (2025). https://arxiv.org/abs/2504.17471; Fault-Tolerant Federated Reinforcement Learning. https://arxiv.org/abs/2110.14074; Chen et al. (2026), Byzantine agreement under reorder/channel attacks. https://arxiv.org/abs/2609.09623
+
+Graph information flow: *Over-Squashing in Graph Neural Networks: A Comprehensive Survey* (2023). https://arxiv.org/abs/2308.15568; Epping et al. (2024), *Graph Neural Networks Do Not Always Oversmooth*. https://arxiv.org/abs/2406.02269
 
 Hypernetwork continual learning: Partial Hypernetworks (2023). https://arxiv.org/abs/2306.10724; HyperInterval (2024). https://arxiv.org/abs/2405.15444
 
 ## Status
 
-The project remains **falsification-first and pre-implementation**. Milestone 16 does not validate autonomous self-healing, regeneration, or self-modification; it narrows those claims into explicit recovery objectives, threat models, statistical tests, and distributed-systems assumptions.
+The project remains **falsification-first and pre-implementation**. Milestone 17 does not validate distributed cognition, consensus-based correctness, autonomous routing, privacy-preserving Byzantine resilience, or self-healing; it narrows these claims into explicit graph models, threat assumptions, resource accounting, statistical tests, and failure-domain hypotheses.
