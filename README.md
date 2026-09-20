@@ -4,21 +4,20 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 18 — Adaptive Topology Stability and Game-Theoretic Routing Audit**
+**Milestone 19 — Adaptive Adversary, Mechanism Design, and Equilibrium Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 18 findings
+### Milestone 19 findings
 
-- Adaptive routing is a coupled feedback system: routing changes specialist traffic, specialist state changes router rewards, and reliability/memory state can feed back into topology.
-- Stable isolated components do not imply stability of the coupled Holobiont.
-- Routing entropy is not a universal health metric; low entropy can mean specialization or collapse, while high entropy can mean diversity or indecision.
-- Direct topology manipulation and indirect manipulation of router inputs are distinct attack classes.
-- Byzantine filtering must account for multimodal honest specialist populations; distance from a single center is not a universal fault predicate.
-- Privacy noise can alter geometric separation used by robust aggregation, so privacy and robustness require an explicit Pareto evaluation rather than an assumed compatibility theorem.
-- Replica count and effective evidence are different quantities when artifacts share lineage, data, code, infrastructure, keys, or memory.
-- No-regret routing guarantees apply to specified online-learning models and do not imply globally optimal cognitive organization in a nonstationary coupled system.
-- Sparse MoE evidence supports conditional computation and routing/capacity tradeoffs, not a theorem that adaptive routing improves general intelligence.
+- An adaptive Holobiont facing an adaptive attacker is a coupled stochastic game, not merely a single-agent minimization problem.
+- A minimax expression does not by itself establish existence of a saddle point or a globally robust equilibrium for non-convex neural policies and discrete topology actions.
+- Trust-aware routing can create positive feedback: trust changes routing, routing changes observations, and observations update trust.
+- Evidence value depends on dependency structure, not raw replica count; shared lineage, data, code, keys, memory, or infrastructure can create common-mode failures.
+- Behavioral recovery must be evaluated separately from checkpoint integrity or parameter similarity.
+- Hypernetwork regeneration is not arbitrary cognitive reconstruction; behavioral equivalence depends on generator capacity, conditioning information, task coverage, and tolerance.
+- Robust Byzantine filtering must preserve multimodal honest specialists rather than treating distance from one center as a universal fault predicate.
+- Clean verification does not imply worst-case adversarial verification without an explicit threat-model bridge.
 
 ## Research dossier
 
@@ -40,6 +39,7 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/15_milestone_16_recovery_verification_adaptive_compromise_audit.md` — recovery hierarchy, behavioral verification, RPO/RTO, verifier independence, common-mode recovery failure, Byzantine/self-stabilization assumptions, regeneration limits, attack surfaces, hypotheses H64–H71, and recovery experiments.
 - `research/16_milestone_17_byzantine_graph_consensus_and_failure_domain_audit.md` — dynamic graph formalization, Byzantine learning vs agreement, heterogeneous-honest baselines, routing attacks, graph bottlenecks, failure-domain diversity, privacy/robustness separation, hypotheses H72–H79, and distributed-implementation decision gates.
 - `research/17_milestone_18_adaptive_topology_stability_and_game_theoretic_routing_audit.md` — coupled routing/specialist dynamics, local stability conditions, router-induced distribution shift, strategic topology attacks, multimodal-honest Byzantine filtering, privacy/robustness interaction, dependency-aware evidence, hypotheses H80–H87, and the adaptive-routing decision gate.
+- `research/18_milestone_19_adaptive_adversary_equilibrium_and_mechanism_design_audit.md` — adaptive adversary hierarchy, stochastic-game formulation, minimax/equilibrium assumptions, trust-routing feedback, mechanism/resource allocation, dependency-adjusted evidence, behavioral recovery, regeneration limits, hypotheses H88–H96, and the strategic-routing decision gate.
 
 ## Methodology
 
@@ -51,7 +51,7 @@ The project does not treat biological analogy as proof. Reliability, regeneratio
 
 ## Implementation gate
 
-Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Causal intervention controls are required before interpreting attention or routing weights. Milestone 12 requires explicit loss terms, gradient diagnostics, capacity matching, and degenerate-optimum checks. Milestone 13 requires an explicit channel/coding model for information capacity or rate–distortion quantities, task-risk definitions for communicated representations, and sensitivity analysis for neural mutual-information estimators. Milestone 14 requires separate calibration/OOD/selective-risk evaluation, common-mode-fault tests, explicit decision costs, and exact conformal assumptions. Milestone 15 requires adaptive attacker models, attack-budget sweeps, calibration-poisoning tests, detector-evasion tests, router manipulation, memory-poisoning persistence, common-mode attacks, and matched clean-utility/resource comparisons. Milestone 16 additionally requires behavioral recovery tests, trusted-state lineage, verifier failure-domain analysis, checkpoint/replica integrity tests, RPO/RTO accounting, recovery-loop poisoning tests, common-mode verifier attacks, and statistical confidence on recovery error. Milestone 17 additionally requires dynamic-topology controls, explicit graph/consensus assumptions, heterogeneous-honest baselines, routing attack tests, failure-domain dependency analysis, topology/communication accounting, privacy-vs-robustness separation, and fixed-topology controls before adaptive-graph claims. Milestone 18 additionally requires isolated-component stability controls, router-learning-rate and top-k/soft-routing sweeps, starvation/oscillation measurements, direct and indirect routing attacks, multimodal-honest Byzantine baselines, privacy-noise sweeps, dependency-aware evidence metrics, and one-variable-at-a-time release of adaptive topology.
+Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Causal intervention controls are required before interpreting attention or routing weights. Milestone 12 requires explicit loss terms, gradient diagnostics, capacity matching, and degenerate-optimum checks. Milestone 13 requires an explicit channel/coding model for information capacity or rate–distortion quantities, task-risk definitions for communicated representations, and sensitivity analysis for neural mutual-information estimators. Milestone 14 requires separate calibration/OOD/selective-risk evaluation, common-mode-fault tests, explicit decision costs, and exact conformal assumptions. Milestone 15 requires adaptive attacker models, attack-budget sweeps, calibration-poisoning tests, detector-evasion tests, router manipulation, memory-poisoning persistence, common-mode attacks, and matched clean-utility/resource comparisons. Milestone 16 additionally requires behavioral recovery tests, trusted-state lineage, verifier failure-domain analysis, checkpoint/replica integrity tests, RPO/RTO accounting, recovery-loop poisoning tests, common-mode verifier attacks, and statistical confidence on recovery error. Milestone 17 additionally requires dynamic-topology controls, explicit graph/consensus assumptions, heterogeneous-honest baselines, routing attack tests, failure-domain dependency analysis, topology/communication accounting, privacy-vs-robustness separation, and fixed-topology controls before adaptive-graph claims. Milestone 18 additionally requires isolated-component stability controls, router-learning-rate and top-k/soft-routing sweeps, starvation/oscillation measurements, direct and indirect routing attacks, multimodal-honest Byzantine baselines, privacy-noise sweeps, dependency-aware evidence metrics, and one-variable-at-a-time release of adaptive topology. Milestone 19 additionally requires adaptive-adversary threat classes, stochastic-game assumptions, trust-feedback hysteresis measurements, dependency-adjusted evidence, strategic topology attacks, behavioral recovery verification, hypernetwork conditioning/task-coverage tests, and adaptive-vs-oblivious attack comparisons.
 
 ## Key literature anchors
 
@@ -73,7 +73,7 @@ Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Knoblauch et a
 
 Memory systems: Lewis et al. (2020), RAG; Packer et al. (2023), MemGPT; Park et al. (2023), Generative Agents; Wang et al. (2023), LongMem.
 
-Byzantine-robust learning: Yin et al. (2018); Xie et al. (2020); Liu et al. (2023). https://arxiv.org/abs/2302.06079; Farhadkhani et al. (2024). https://arxiv.org/abs/2405.00491; Parsa et al. (2025). https://arxiv.org/abs/2511.03529
+Byzantine-robust learning: Yin et al. (2018); Xie et al. (2020); Liu et al. (2023). https://arxiv.org/abs/2302.06079; Farhadkhani et al. (2024). https://arxiv.org/abs/2405.00491; Parsa et al. (2025). https://arxiv.org/abs/2511.03529; FedCLEAN (2025). https://arxiv.org/abs/2501.12123; FLTG (2025). https://arxiv.org/abs/2505.12851; OptiGradTrust (2025). https://arxiv.org/abs/2507.23638
 
 Federated heterogeneity/privacy: Yi et al. (2024), FedP3. https://arxiv.org/abs/2404.09816
 
@@ -81,7 +81,7 @@ Privacy-preserving Byzantine robustness: ByzSFL (2025). https://arxiv.org/abs/25
 
 Calibration/OOD/selective prediction: Guo et al. (2017). https://proceedings.mlr.press/v70/guo17a.html; Hendrycks & Gimpel (2017). https://arxiv.org/abs/1610.02136; Geifman & El-Yaniv (2019). https://proceedings.mlr.press/v97/geifman19a.html
 
-Robust conformal prediction: Zargarbashi et al. (2024). https://proceedings.mlr.press/v235/h-zargarbashi24a.html; certifiably Byzantine-robust federated conformal prediction. https://arxiv.org/abs/2406.01960
+Robust conformal prediction: Zargarbashi et al. (2024). https://proceedings.mlr.press/v235/h-zargarbashi24a.html; certifiably Byzantine-robust federated conformal prediction. https://arxiv.org/abs/2406.01960; adversarial calibration robustness (2025). https://arxiv.org/abs/2511.18562
 
 Self-stabilization: Faghih et al. (2015). https://arxiv.org/abs/1509.05664; Blin, Petit & Tixeuil (2025). https://arxiv.org/abs/2505.06596
 
@@ -91,4 +91,4 @@ Graph information flow: Over-Squashing survey (2023). https://arxiv.org/abs/2308
 
 ## Status
 
-The project remains **falsification-first and pre-implementation**. Milestone 18 does not validate adaptive topology, game-theoretic routing, privacy-preserving Byzantine resilience, or self-organizing cognition; it narrows them into coupled dynamical models, threat assumptions, resource accounting, statistical tests, and failure hypotheses.
+The project remains **falsification-first and pre-implementation**. Milestone 19 does not validate strategic routing, game-theoretic equilibrium, privacy-preserving Byzantine resilience, autonomous regeneration, self-organizing cognition, consciousness, or AGI-level claims; it narrows them into coupled stochastic models, explicit threat assumptions, dependency-aware evidence metrics, resource accounting, statistical tests, and failure hypotheses.
