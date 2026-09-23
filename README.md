@@ -4,23 +4,20 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 21 — Controlled Self-Evolution, Memory Governance, and Adaptive Topology Audit**
+**Milestone 22 — Adaptive Memory/Skill Security and Non-Stationary Robustness Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 21 findings
+### Milestone 22 findings
 
-- Current evidence supports bounded modular adaptation through externalized memory/skills, routing, and selective consolidation; it does not establish open-ended self-improvement.
-- External memory moves rather than eliminates the continual-learning problem: retrieval competition, stale memory, negative transfer, and bounded context remain failure modes.
-- Latent-memory MoE and frozen-core approaches provide evidence for bounded continual adaptation, not general self-evolution.
-- Self-designing skill agents demonstrate bounded external-state self-modification, but benchmark gains do not establish general capability growth or evaluator robustness.
-- Adaptive topology can improve decentralized learning under some non-IID conditions, but graph optimization must be matched for communication, latency, and security.
-- Byzantine-resilient dynamic graph construction is formally tractable under explicit distributed-system assumptions; those guarantees do not transfer automatically to neural cognition.
-- Persistent memory remains a security-sensitive state transition and can be attacked across sessions.
-- Memory governance should separate value, cost, provenance, and risk rather than treating retrieval similarity as truth.
-- Objective protection, lineage, behavioral regression, and independent verification are necessary controls for bounded self-modification, not universal guarantees.
-- Two-timescale adaptation requires coupled-system stability analysis; stability of isolated modules is insufficient.
-- Version count is not independent evidence when replicas share data, code, memory, routers, or verifiers.
+- Experience-to-skill transformation is a distinct persistence attack surface; deleting source memories may not remove derived behavioral artifacts.
+- Locally correct experiences can still be unsafe when generalized outside their generating distribution; promotion needs transfer and safety validation.
+- Meta-evolving memory architecture changes the semantics of historical memory even when stored bytes are unchanged.
+- Dynamic regret/tracking is more appropriate than fixed-point convergence claims in non-stationary adversarial environments.
+- A globally safe Byzantine fraction does not imply a safe active routing subgraph under partial participation or adaptive topology.
+- Privacy transformations can alter the geometry available to Byzantine detectors; privacy and robustness must be evaluated jointly.
+- Global-workspace/latent multimodal experiments support a plausible engineering synthesis, not workspace necessity, consciousness, or general superiority.
+- Derived skills, memory interpreters, routers and retrievers are first-class persistent state and require provenance/lineage and rollback controls.
 
 ## Research dossier
 
@@ -44,7 +41,8 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/17_milestone_18_adaptive_topology_stability_and_game_theoretic_routing_audit.md` — adaptive topology and routing stability audit.
 - `research/18_milestone_19_adaptive_adversary_equilibrium_and_mechanism_design_audit.md` — adaptive adversary and equilibrium audit.
 - `research/19_milestone_20_self_evolving_meta_learning_and_cognitive_change_audit.md` — self-evolution and controlled cognitive-change audit.
-- `research/20_milestone_21_controlled_self_evolution_memory_governance_and_adaptive_topology_audit.md` — controlled self-evolution, memory lifecycle governance, latent-memory MoE, adaptive topology, dynamic Byzantine networks, objective protection, new equations, experiments E10.1–E10.7, and hypotheses H106–H115.
+- `research/20_milestone_21_controlled_self_evolution_memory_governance_and_adaptive_topology_audit.md` — controlled self-evolution, memory lifecycle governance, latent-memory MoE, adaptive topology, dynamic Byzantine networks, objective protection, and hypotheses H106–H115.
+- `research/21_milestone_22_adaptive_memory_skill_security_and_nonstationary_robustness_audit.md` — experience-to-skill attacks, transfer validation, active-subgraph Byzantine risk, dynamic regret, privacy/robustness coupling, workspace evidence, experiments E11.1–E11.8, and hypotheses H116–H124.
 
 ## Methodology
 
@@ -56,9 +54,7 @@ Biological analogy is not proof. Reliability, regeneration, anti-fragility, cons
 
 ## Implementation gate
 
-Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Milestones 12–20 additionally require explicit optimization terms, information/channel assumptions, reliability/OOD tests, adversarial attacks, behavioral recovery verification, graph/topology controls, adaptive-adversary models, protected objectives, lineage/dependency analysis, and bounded self-modification.
-
-Milestone 21 additionally requires memory lifecycle states, matched memory/compute/bandwidth budgets, frozen-core latent-memory controls, independently verified self-generated skills, adaptive-vs-oblivious attacker comparisons, communication-matched topology experiments, common-mode lineage sweeps, protected external objectives, behavioral-change budgets, and held-out evaluation immune to the evolution loop.
+Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Later milestones additionally require explicit optimization terms, information/channel assumptions, reliability/OOD tests, adversarial attacks, behavioral recovery verification, graph/topology controls, adaptive-adversary models, protected objectives, lineage/dependency analysis, bounded self-modification, memory/skill provenance, active-subgraph safety, and non-stationary tracking.
 
 ## Key literature anchors
 
@@ -68,19 +64,21 @@ Milestone 21 additionally requires memory lifecycle states, matched memory/compu
 - HyperNetworks: Ha, Dai & Le (2016). https://arxiv.org/abs/1609.09106
 - Contrastive representation learning: Chen et al. (2020). https://proceedings.mlr.press/v119/chen20j.html
 - Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Knoblauch et al. (2020).
-- Modular Memory is the Key to Continual Learning Agents (2026). https://arxiv.org/abs/2603.01761
-- When Continual Learning Moves to Memory (2026). https://arxiv.org/abs/2604.27003
 - Dynamic Mixture of Latent Memories for Self-Evolving Agents (2026). https://arxiv.org/abs/2605.21951
 - Memento-Skills: Let Agents Design Agents (2026). https://arxiv.org/abs/2603.18743
-- Forget to Improve: On-Device LLM-Agent Continual Learning via Budget-Curated Memory (2026). https://arxiv.org/abs/2606.25115
+- MemEvolve: Meta-Evolution of Agent Memory Systems (2025/2026). https://arxiv.org/abs/2512.18746
+- SkillJack: Persistent Skill Backdoors in Self-Evolving Agents (2026). https://arxiv.org/abs/2608.03509
+- OEP: Poisoning Self-Evolving LLM Agents (2026). https://arxiv.org/abs/2605.18930
+- Dynamic Regret for Byzantine-Robust Online Federated Learning (2026). https://doi.org/10.1109/tsp.2026.3673260
+- Delayed Momentum Aggregation (2026). https://arxiv.org/abs/2509.02970
+- BPFLH: Byzantine-Robust Privacy-Preserving FL for Heterogeneous Data (2026). https://doi.org/10.1109/TDSC.2026.3661522
+- Multimodal Dreaming: A Global Workspace Approach to World Model-Based RL (2025). https://arxiv.org/abs/2502.21142
+- Global Workspace selection-broadcast hypothesis (2025). https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1607190/full
 - Dynamic Topology Optimization for Non-IID Data in Decentralized Learning (2025). https://bacox.github.io/paper/Topology-Optimization-Decentralized-Learning/
 - Byzantine-Resilient Dynamic Peer-to-Peer Networks (2025). https://arxiv.org/abs/2506.04368
-- Zombie Agents: Persistent Control of Self-Evolving LLM Agents (2026). https://arxiv.org/abs/2602.15654
-- CAMS memory security (2026). https://doi.org/10.1016/j.eij.2026.100983
-- Byzantine-robust learning: Yin et al. (2018). https://arxiv.org/abs/1803.01498
 - Calibration: Guo et al. (2017). https://proceedings.mlr.press/v70/guo17a.html
 - Selective prediction: Geifman & El-Yaniv (2019). https://proceedings.mlr.press/v97/geifman19a.html
 
 ## Status
 
-The project remains **falsification-first and pre-implementation**. Milestone 21 does not validate self-evolving cognition, open-ended self-improvement, strategic equilibrium, privacy-preserving Byzantine resilience, autonomous regeneration, self-organizing cognition, consciousness, or AGI-level claims. It narrows the research question to whether controlled modular change can improve the utility–retention–risk–resource frontier under explicit memory, topology, objective, lineage and adversarial constraints.
+The project remains **falsification-first and pre-implementation**. Milestone 22 does not validate self-evolving cognition, open-ended self-improvement, adaptive equilibrium, privacy-preserving Byzantine resilience, autonomous regeneration, self-organizing cognition, consciousness, or AGI-level claims. The current research question is whether controlled modular change can improve the utility–retention–risk–resource frontier under explicit memory/skill provenance, active-topology, non-stationary, objective and adversarial constraints.
