@@ -4,20 +4,23 @@ Rigorous research dossier for the **Cognitive Holobiont Treatise**.
 
 ## Current milestone
 
-**Milestone 22 — Adaptive Memory/Skill Security and Non-Stationary Robustness Audit**
+**Milestone 23 — Evaluation Validity, Causal Attribution, and Evidence Independence Audit**
 
 The Treatise is evaluated as a conceptual distributed modular-intelligence architecture. Each major claim is classified as **established**, **plausible engineering synthesis**, **unsupported/speculative**, or **mathematically incorrect/incomplete**. No implementation or validation claim is made without evidence.
 
-### Milestone 22 findings
+### Milestone 23 findings
 
-- Experience-to-skill transformation is a distinct persistence attack surface; deleting source memories may not remove derived behavioral artifacts.
-- Locally correct experiences can still be unsafe when generalized outside their generating distribution; promotion needs transfer and safety validation.
-- Meta-evolving memory architecture changes the semantics of historical memory even when stored bytes are unchanged.
-- Dynamic regret/tracking is more appropriate than fixed-point convergence claims in non-stationary adversarial environments.
-- A globally safe Byzantine fraction does not imply a safe active routing subgraph under partial participation or adaptive topology.
-- Privacy transformations can alter the geometry available to Byzantine detectors; privacy and robustness must be evaluated jointly.
-- Global-workspace/latent multimodal experiments support a plausible engineering synthesis, not workspace necessity, consciousness, or general superiority.
-- Derived skills, memory interpreters, routers and retrievers are first-class persistent state and require provenance/lineage and rollback controls.
+- Observed benchmark improvement must be separated from causal mechanism improvement and generalized capability.
+- MoE routing balance is an optimization problem; balanced utilization is not itself evidence of better task quality.
+- Latent-memory gains require compute/context/retrieval-matched controls before being interpreted as mechanism-specific gains.
+- Continual-learning evaluation must separate acquisition, retention, forward transfer, backward transfer and resource cost.
+- Shared lineage, encoders, checkpoints and memory can make nominal specialists statistically dependent; replica count is not evidence count.
+- Causal claims require interventions and assumptions; correlation among routing, memory and performance is insufficient.
+- Latent-space alignment/reconstruction is not semantic equivalence without stronger identifiability or intervention evidence.
+- Adaptive self-evolution can overfit visible evaluators; hidden post-freeze evaluation and evaluator provenance are required.
+- Non-stationary environments require tracking metrics such as dynamic regret when an online-learning formulation applies, rather than fixed-point convergence alone.
+- Scaffold changes are themselves causal interventions and must be controlled when comparing agent systems.
+- Evaluation validity is now treated as an architectural dependency, not a post-hoc reporting step.
 
 ## Research dossier
 
@@ -43,18 +46,19 @@ The Treatise is evaluated as a conceptual distributed modular-intelligence archi
 - `research/19_milestone_20_self_evolving_meta_learning_and_cognitive_change_audit.md` — self-evolution and controlled cognitive-change audit.
 - `research/20_milestone_21_controlled_self_evolution_memory_governance_and_adaptive_topology_audit.md` — controlled self-evolution, memory lifecycle governance, latent-memory MoE, adaptive topology, dynamic Byzantine networks, objective protection, and hypotheses H106–H115.
 - `research/21_milestone_22_adaptive_memory_skill_security_and_nonstationary_robustness_audit.md` — experience-to-skill attacks, transfer validation, active-subgraph Byzantine risk, dynamic regret, privacy/robustness coupling, workspace evidence, experiments E11.1–E11.8, and hypotheses H116–H124.
+- `research/22_milestone_23_evaluation_causal_attribution_and_evidence_independence_audit.md` — causal attribution, evaluator leakage, dependency-aware evidence, resource-matched ablations, latent identifiability, non-stationary evaluation, experiments E12.1–E12.8, and hypotheses H125–H134.
 
 ## Methodology
 
-For each claim: define the proposition → type every mathematical object → identify primary evidence → compare conflicting findings → state assumptions → derive or correct equations → define a falsification experiment → specify statistical evaluation. Surveys are used for discovery; primary papers are preferred for decisive claims.
+For each claim: define the proposition → type every mathematical object → identify primary evidence → compare conflicting findings → state assumptions → derive or correct equations → define a falsification experiment → specify statistical evaluation. Surveys are used for discovery; primary papers are preferred for decisive claims. Milestone 23 adds causal intervention, evaluator separation, dependency/lineage analysis and resource matching as explicit evidence gates.
 
 ## Evidence principles
 
-Biological analogy is not proof. Reliability, regeneration, anti-fragility, consciousness, autonomy and AGI-level claims require explicit operational definitions and measurable tests. A successful component experiment does not validate the whole Holobiont.
+Biological analogy is not proof. Reliability, regeneration, anti-fragility, consciousness, autonomy and AGI-level claims require explicit operational definitions and measurable tests. A successful component experiment does not validate the whole Holobiont. Nominal specialist count, latent similarity, benchmark score, or consensus are not treated as independent evidence without a justified model.
 
 ## Implementation gate
 
-Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Later milestones additionally require explicit optimization terms, information/channel assumptions, reliability/OOD tests, adversarial attacks, behavioral recovery verification, graph/topology controls, adaptive-adversary models, protected objectives, lineage/dependency analysis, bounded self-modification, memory/skill provenance, active-subgraph safety, and non-stationary tracking.
+Implementation follows specification. Before serious prototyping, fix task/data splits, specialist roles and model versions, bridge/routing definitions, objectives, fault and Byzantine threat models, regeneration artifacts, memory semantics, workspace capacity, communication accounting, primary metrics, statistical replication, acceptance criteria, and reproducibility artifacts. Later milestones additionally require explicit optimization terms, information/channel assumptions, reliability/OOD tests, adversarial attacks, behavioral recovery verification, graph/topology controls, adaptive-adversary models, protected objectives, lineage/dependency analysis, bounded self-modification, memory/skill provenance, active-subgraph safety, non-stationary tracking, causal ablations, hidden evaluators, and resource-matched baselines.
 
 ## Key literature anchors
 
@@ -65,13 +69,21 @@ Implementation follows specification. Before serious prototyping, fix task/data 
 - Contrastive representation learning: Chen et al. (2020). https://proceedings.mlr.press/v119/chen20j.html
 - Continual learning: Kirkpatrick et al. (2017); Li & Hoiem (2016); Knoblauch et al. (2020).
 - Dynamic Mixture of Latent Memories for Self-Evolving Agents (2026). https://arxiv.org/abs/2605.21951
+- LatentMem: Customizing Latent Memory for Multi-Agent Systems (2026). https://arxiv.org/abs/2602.03036
 - Memento-Skills: Let Agents Design Agents (2026). https://arxiv.org/abs/2603.18743
 - MemEvolve: Meta-Evolution of Agent Memory Systems (2025/2026). https://arxiv.org/abs/2512.18746
 - SkillJack: Persistent Skill Backdoors in Self-Evolving Agents (2026). https://arxiv.org/abs/2608.03509
 - OEP: Poisoning Self-Evolving LLM Agents (2026). https://arxiv.org/abs/2605.18930
 - Dynamic Regret for Byzantine-Robust Online Federated Learning (2026). https://doi.org/10.1109/tsp.2026.3673260
-- Delayed Momentum Aggregation (2026). https://arxiv.org/abs/2509.02970
 - BPFLH: Byzantine-Robust Privacy-Preserving FL for Heterogeneous Data (2026). https://doi.org/10.1109/TDSC.2026.3661522
+- $\phi$-Balancing for Mixture-of-Experts Training (2026). https://arxiv.org/abs/2605.15403
+- Three Phases of Expert Routing (2026). https://arxiv.org/abs/2604.04230
+- Statistical and structural identifiability in representation learning (ICLR 2026). https://proceedings.iclr.cc/paper_files/paper/2026/hash/f67e5f99b23b108a3a6665f410034bcd-Abstract-Conference.html
+- Multi-View Causal Representation Learning with Partial Observability (2024). https://arxiv.org/abs/2311.04056
+- CurLL continual-learning benchmark (ACL/BabyLM 2025). https://aclanthology.org/2025.babylm-main.20/
+- CLeaRS continual vision-language learning benchmark (2026). https://arxiv.org/abs/2604.00820
+- Causal inference over time (AAAI 2025). https://ojs.aaai.org/index.php/AAAI/article/view/33626
+- HAL: Holistic Agent Leaderboard (ICLR 2026). https://hal.cs.princeton.edu/
 - Multimodal Dreaming: A Global Workspace Approach to World Model-Based RL (2025). https://arxiv.org/abs/2502.21142
 - Global Workspace selection-broadcast hypothesis (2025). https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2025.1607190/full
 - Dynamic Topology Optimization for Non-IID Data in Decentralized Learning (2025). https://bacox.github.io/paper/Topology-Optimization-Decentralized-Learning/
@@ -81,4 +93,4 @@ Implementation follows specification. Before serious prototyping, fix task/data 
 
 ## Status
 
-The project remains **falsification-first and pre-implementation**. Milestone 22 does not validate self-evolving cognition, open-ended self-improvement, adaptive equilibrium, privacy-preserving Byzantine resilience, autonomous regeneration, self-organizing cognition, consciousness, or AGI-level claims. The current research question is whether controlled modular change can improve the utility–retention–risk–resource frontier under explicit memory/skill provenance, active-topology, non-stationary, objective and adversarial constraints.
+The project remains **falsification-first and pre-implementation**. Milestone 23 does not validate self-evolving cognition, open-ended self-improvement, adaptive equilibrium, privacy-preserving Byzantine resilience, autonomous regeneration, self-organizing cognition, consciousness, or AGI-level claims. The current research question is whether controlled modular change can improve the utility–retention–risk–resource frontier **after** causal intervention, resource matching, hidden evaluation, dependency analysis, latent-identifiability checks, and explicit threat/distribution assumptions.
