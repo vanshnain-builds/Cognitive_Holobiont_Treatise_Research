@@ -1,0 +1,3 @@
+# Research note
+
+Falsification-first.
